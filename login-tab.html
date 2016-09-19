@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/base.css'>
+    <link rel="stylesheet" href="css/online.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function(){
+            $(".chat-content").css("height",window.innerHeight-210);
+            $(window).resize(function(){
+                $(".chat-content").css("height",window.innerHeight-210);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="chat-login">
+        <div class="top-bar">
+            <div class="fr control clearfix">
+                <div class="fl min"></div>
+                <div class="fl close"></div>
+            </div>
+        </div>
+        <div class="logo"></div>
+        <div class="login-form">
+            <div class="user-img fl">
+                <img src="images/user-img.png" alt="">
+            </div>
+            <div class="form-input fl">
+                <input type="text" class="number" placeholder="请输入账号">
+                <input type="text" class="password" placeholder="请输入密码">
+                <input type="checkbox">
+                <label for="">记住密码</label>
+                <input type="checkbox" style="margin-left: 47px;">
+                <label for="">自动登录</label>
+                <input type="button" value="登录">
+            </div>
+            <div class="fl">
+                <a href="#" class="help">注册账号</a>
+                <a href="#" class="help">忘记密码</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

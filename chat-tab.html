@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/base.css'>
+    <link rel="stylesheet" href="css/online.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function(){
+            $(".chat-content").css("height",window.innerHeight-210);
+            $(window).resize(function(){
+                $(".chat-content").css("height",window.innerHeight-210);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="chat-tab">
+        <div class="title">
+            <div class="top-bar">
+                <div class="fr control clearfix">
+                    <div class="fl min"></div>
+                    <div class="fl close"></div>
+                </div>
+            </div>
+            <div class="user-info clearfix" style="margin-top: -10px;">
+                <div class="img">
+                    <img src="images/user-img.png" alt="">
+                </div>
+                <div class="info">
+                    <p class="name dib">宋钟基</p>
+                    <p class="status">（局长）</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-content">
+            <div class="chat-item clearfix">
+                <div class="chat-other">
+                    明天下午去上海。
+                </div>
+            </div>
+            <div class="chat-item clearfix">
+                <div class="chat-my">
+                    好的，收到了。
+                </div>
+            </div>
+        </div>
+        <div class="chat-input ">
+            <div class="clearfix">
+                <ul class="fl">
+                    <li class="function-item w20">
+                        <span class="icon-font"></span>
+                    </li>
+                    <li class="function-item w20">
+                        <span class="icon-face"></span>
+                    </li>
+                    <li class="function-item w20">
+                        <span class="icon-picture"></span>
+                    </li>
+                </ul>
+                <div class="fr message-log w20">
+                    <span class="icon-time"></span>
+                    <a href="#">消息记录</a>
+                    <span class="icon-caret-down"></span>
+                </div>
+            </div>
+            <div class="submit-content rel">
+                <textarea class="submit-input"></textarea>
+                <input type="submit" href="#" class="submit-button abs" value="发送">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

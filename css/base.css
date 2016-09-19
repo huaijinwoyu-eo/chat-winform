@@ -1,0 +1,327 @@
+/*全局定义*/
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td, table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	font-family: "microsoft YaHei";
+}
+body{font-size:14px;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	border: 0 none;
+	vertical-align: top;
+}
+i, span{ font-style:normal;}
+button {
+	cursor: pointer;
+}
+/*public common style*/
+table, th, td {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+	font-family: "microsoft YaHei";
+}
+a:hover {
+	color: #0069b8;
+}
+
+ul, li {
+	list-style: none;
+}
+
+em, var {
+	font-style: normal;
+}
+
+.public_full{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+body.top_banner{
+	background:#f0f0f0 url("../images/top_banner.png") no-repeat top center;
+}
+
+/* 定义块位置浮动左右浮动 及清除浮动 */
+.fl {
+	display: inline;
+	float:left;
+}
+.fr {
+	display: inline;
+	float:right;
+}
+.cl {
+	clear:both;
+}
+/*定义全局段落行高*/
+p {
+	line-height:24px;
+	/*text-indent:2em;*/
+}
+/*定义字体正常*/
+.n {
+	font-weight:normal;
+	font-style:normal;
+}
+/*定义字体加粗*/
+.b {
+	font-weight:bold;
+}
+/* 字体对齐方式：中间。左右 */
+.tc {
+	text-align:center;
+}
+.tr {
+	text-align:right;
+}
+.tl {
+	text-align:left;
+}
+.auto0 {
+	margin:0 auto;
+}
+/* 字体排版 */
+.fyh {
+	font-family:"Microsoft YaHei"
+}
+.fst{ font-family:simSun}
+
+.wh {
+	color:white;
+}
+.f12 {
+	font-size:12px;
+}
+.f14 {
+	font-size:14px;
+}
+.f16 {
+	font-size:16px;
+}
+.f20 {
+	font-size:20px;
+}
+.f22 {
+	font-size:22px;
+}
+.f24 {
+	font-size:24px;
+}
+.fb {
+	font-weight:bold;
+}
+.fn {
+	font-weight:normal;
+}
+.t2 {
+	text-indent:2em;
+}
+.t0 {
+	text-indent:0em;
+}
+/* 边距 */
+.m10 {
+	margin:10px;
+}
+.m15 {
+	margin:15px;
+}
+.mt5 {
+	margin-top:5px;
+}
+.mt10 {
+	margin-top:10px;
+}
+.mt15 {
+	margin-top:15px;
+}
+.mt20 {
+	margin-top:20px;
+}
+.mt60{
+	margin-top: 60px!important;
+}
+.mr5 {
+	margin-right:5px;
+}
+.mr10 {
+	margin-right:10px;
+}
+.mr15 {
+	margin-right:15px;
+}
+.mr20 {
+	margin-right:20px;
+}
+.mb5 {
+	margin-bottom:5px;
+}
+.mb10 {
+	margin-bottom:10px;
+}
+.mb15 {
+	margin-bottom:15px;
+}
+.mb20 {
+	margin-bottom:20px;
+}
+.ml5 {
+	margin-left:5px;
+}
+.ml10 {
+	margin-left:10px;
+}
+.ml15 {
+	margin-left:15px;
+}
+.ml20 {
+	margin-left:20px;
+}
+.p10 {
+	padding:10px;
+}
+.p15 {
+	padding:15px;
+}
+.p20 {
+	padding:20px;
+}
+.pt5 {
+	padding-top:5px;
+}
+.pt10 {
+	padding-top:10px;
+}
+.pt15 {
+	padding-top:15px;
+}
+.pt20 {
+	padding-top:20px;
+}
+.pr5 {
+	padding-right:5px;
+}
+.pr10 {
+	padding-right:10px;
+}
+.pr15 {
+	padding-right:15px;
+}
+.pr20 {
+	padding-right:20px;
+}
+.pb5 {
+	padding-bottom:5px;
+}
+.pb10 {
+	padding-bottom:10px;
+}
+.pb15 {
+	padding-bottom:15px;
+}
+.pb20 {
+	padding-bottom:20px;
+}
+.pl5 {
+	padding-left:5px;
+}
+.pl10 {
+	padding-left:10px;
+}
+.pl15 {
+	padding-left:15px;
+}
+.pl20 {
+	padding-left:20px;
+}
+/* 定义块位置相对、绝对*/
+.rel {
+	position:relative;
+}
+.abs {
+	position:absolute;
+}
+/*定义块的顺序 只有div为absolute 才可用*/
+.zx1 {
+	z-index:1;
+}
+.zx2 {
+	z-index:2;
+}
+/*div 是行内样式 ，为块状样式*/
+.dn {
+	display:none;
+}
+.db {
+	display:block;
+}
+/*行内块状*/
+.dib {
+	-moz-inline-stack:inline-block;
+	display:inline-block;
+}
+.di {
+	display:inline;
+}
+.ovh {
+	overflow:hidden;
+}
+.ova{
+	overflow: auto;
+}
+/* 高度 */
+
+.lh24 {
+	line-height:24px;
+}
+.h24 {
+	height:24px;
+}
+.lh24 {
+	height:24px;
+	line-height:24px;
+}
+.z {
+	_zoom:1;
+}
+
+/* 清除浮动类 */
+.clearfix:after {
+	clear:both;
+	content:".";
+	display:block;
+	font-size:0;
+	height:0;
+	visibility:hidden;
+}
+.clearfix { display:block; }
+
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	padding:0;
+	border-top:1px solid #ccc;
+	margin:0;
+}
+
+.hidden{
+	display: none;
+}
+i.w25[class*="icon-"] {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	width: 25px;
+}
