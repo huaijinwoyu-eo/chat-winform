@@ -13,6 +13,7 @@
     <script src="react/react.min.js"></script>
     <script src="react/react-dom.min.js"></script>
     <script src="react/browser.min.js"></script>
+    <script src="js/getDate.js"></script>
     <script>
         $(function(){
             $(".tab_group").css("height",window.innerHeight-177);
@@ -177,10 +178,7 @@
             </li>
         </ul>
     </div>
-    <div class="list tab_2 un-visible">
-        <ul class="friend-list" id="friend-list">
-
-        </ul>
+    <div class="list tab_2 un-visible" id="friend-list">
         <!--<div class="friend-title w20">-->
             <!--<span class="icon-caret-right"></span>  我的好友（<span class="online">10</span>/<span class="total">20</span>）-->
         <!--</div>-->
@@ -322,5 +320,6 @@
     <input type="button" class="menu fr">
 </div>
 <script src="js/online.js"></script>
+<script src="js/friend-list.js"></script>
 </body>
 </html>

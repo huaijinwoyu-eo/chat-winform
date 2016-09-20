@@ -1,0 +1,107 @@
+[
+  {
+    "jid": "15010206358@10.185.1.95",
+    "online": false,
+    "username": "15010206358",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "刘亚东@10.185.1.95",
+    "online": true,
+    "username": "刘亚东",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "kjc\\40nefu.edu.cn@10.185.1.95",
+    "online": false,
+    "username": "范金凤",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "liu_77\\40163.com@10.185.1.95",
+    "online": false,
+    "username": "刘凤利",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "13895900259\\40163.com@10.185.1.95",
+    "online": false,
+    "username": "赵中南",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "1094659991\\40qq.com@10.185.1.95",
+    "online": true,
+    "username": "王子隆",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "1140840597\\40qq.com@10.185.1.95",
+    "online": false,
+    "username": "陈亚立",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "lilingdi@10.185.1.95",
+    "online": false,
+    "username": "李玲娣",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "15201245360@10.185.1.95",
+    "online": false,
+    "username": "15201245360",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "caijinfeng1984\\40126.com@10.185.1.95",
+    "online": false,
+    "username": "蔡金峰",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "45304324\\40qq.com@10.185.1.95",
+    "online": false,
+    "username": "hanjia",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "zhb512120\\40163.com@10.185.1.95",
+    "online": false,
+    "username": "张彪",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "381893612\\40qq.com@10.185.1.95",
+    "online": false,
+    "username": "381893612\\40qq.com",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "sichanlandag\\40163.com@10.185.1.95",
+    "online": false,
+    "username": "sichanlandag\\40163.com",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  },
+  {
+    "jid": "yufeichen2002\\40sina.com@10.185.1.95",
+    "online": false,
+    "username": "陈宇飞",
+    "imgUrl":"images/user-img.png",
+    "job":"局长"
+  }
+]

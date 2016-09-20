@@ -281,13 +281,14 @@
 .friend-title span[class*=icon-]{
     color: #999999;
 }
-.friend-list{
-    display: none;
-}
 .friend-list li{
     padding: 5px;
     border-bottom: 1px solid #cccccc;
     position: relative;
+}
+.friend-list li a{
+    display: block;
+    cursor: pointer;
 }
 .friend-list li img{
     height: 45px;

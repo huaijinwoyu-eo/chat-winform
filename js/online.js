@@ -1,8 +1,13 @@
 var UserInfo = React.createClass({displayName: "UserInfo",
     getInitialState:function(){
         return{
-            LogName:this.props.LogName
+            LogName:""
         }
+    },
+    componentWillReceiveProps:function(res){
+        this.setState({
+            LogName:res.LogName
+        })
     },
     HandleLogNameChang:function(event){
         this.setState({
@@ -96,7 +101,10 @@ var nowDate = new NewDate();
 
 
 
+
 ReactDOM.render(
     React.createElement(UserInfo,{Name:nowDate.name,ImgUrl:nowDate.imgUrl,LogName:nowDate.logName}),
     document.getElementById("userInfo")
 );
+
+
