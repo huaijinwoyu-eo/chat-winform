@@ -431,6 +431,8 @@
     right: 20px;
     bottom: 10px;
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 .submit-input{
     border: none;
@@ -448,6 +450,7 @@
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 10px;
 }
 .chat-content .chat-other{
     display: inline-block;
