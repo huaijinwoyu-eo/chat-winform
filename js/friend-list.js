@@ -1,4 +1,3 @@
-
 var FriendTitle = React.createClass({
     displayName: "FriendTitle",
     render:function(){
@@ -41,12 +40,10 @@ var FriendList = React.createClass({
                     })
                 )
             }
-
         }
         return(
             React.createElement("ul",{className:"friend-list"},row)
         )
-
     }
 });
 var FriendItem = React.createClass({
@@ -54,7 +51,10 @@ var FriendItem = React.createClass({
     render:function(){
         return(
             React.createElement("li",{className:this.props.onlineTag ? "online-item" :""},
-                React.createElement("a",{href:this.props.jid},
+                React.createElement("a",{
+                    href:"./chat-tab.html?"+this.props.jid+"&"+this.props.imgUrl+"&"+this.props.name+"&"+this.props.job,
+                    target:"_black"
+                },
                     React.createElement("img",{src:this.props.imgUrl,className:"db fl"}),
                     React.createElement("div",{className:"info"},
                         React.createElement("div",{className:"name"},this.props.name),

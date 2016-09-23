@@ -1,24 +1,35 @@
-/**
- * Created by xiaoxiaotong on 2016/9/13.
- */
-var x, y, EndX, EndY;
-$(document).mousedown(function (e) {
-    x = e.pageX;
-    y = e.pageY;
-})
-$(document).mouseup(function (e) {
-    EndX = e.pageX;
-    EndY = e.pageY;
-    var mx = EndX - x;
-    var my = EndY - y;
-    window.external.FormMove(mx, my);
-})
-//$(".setting").click(function () {
-//})
-
-$(".min").click(function () {
-    window.external.API_FormMinimized();
+//聊天窗口对象信息组件。
+var ChatObjInfo = React.createClass({
+    render:function(){
+        return(
+            React.createElement("div",{className:"user-info clearfix",style:{marginTop:"-10px"}},
+                React.createElement("div",{className:"img"},
+                    React.createElement("img",{src:this.props.imgUrl})
+                ),
+                React.createElement("div",{className:"info"},
+                    React.createElement("p",{className:"name dib"},this.props.name),
+                    React.createElement("p",{className:"status"},
+                        "("+this.props.job+")"
+                    )
+                )
+            )
+        )
+    }
 });
-$(".close").click(function () {
-    window.external.API_FormClosed();
+//聊天信息组件
+var ChatMessage = React.createElement({
+    render:function(){
+        return(
+            React.createElement("div",{className:"chat-item clearfix"},
+                React.createElement("div",{className:this.props.type},
+                    this.props.message
+                )
+            )
+        )
+    }
 });
+var href = window.location.search.slice(1).split("&");
+ReactDOM.render(
+    React.createElement(ChatObjInfo,{imgUrl:href[1],name:decodeURI(href[2]),job:decodeURI(href[3])}),
+    document.getElementById("chat-object")
+);
