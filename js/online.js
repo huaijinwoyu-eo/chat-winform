@@ -14,20 +14,11 @@ var UserInfo = React.createClass({displayName: "UserInfo",
             LogName:event.target.value
         })
     },
-    HandleLogNameSubmit:function(event){
-        console.log(this.state);
-        $.post("index.html",event.target.value,function(){});
-    },
-    //更换头像方法。
-    HandleChangeImg:function(){
-        console.log("更换图片");
-        console.log(this)
-    },
     render:function(){
         return(
             React.createElement("div",{},
                 React.createElement("div",{className:"img"},
-                    React.createElement("img",{src:this.props.ImgUrl,onClick:this.HandleChangeImg})
+                    React.createElement("img",{src:this.props.ImgUrl})
                 ),
                 React.createElement("div",{className:"info"},
                     React.createElement("div",{className:"state dib"},
@@ -55,7 +46,7 @@ var UserInfo = React.createClass({displayName: "UserInfo",
                     ),
                     React.createElement("p",{className:"name dib"},this.props.Name),
                     React.createElement("div",{className:"log-name mt5"},
-                        React.createElement("input",{type:"text",placeholder:"编辑个性签名",value:this.state.LogName,onChange:this.HandleLogNameChang,onBlur:this.HandleLogNameSubmit})
+                        React.createElement("input",{type:"text",placeholder:"编辑个性签名",value:this.state.LogName,onChange:this.HandleLogNameChang})
                     )
                 )
             )
@@ -73,37 +64,37 @@ var UserInfo = React.createClass({displayName: "UserInfo",
 });
 //获取数据。
 function NewDate(){
-    this.name = "";
-    this.imgUrl = "";
-    this.logName = "";
-    this.setName = function(n){
-        this.name = n;
+    this.UserName = "";
+    this.HeadImg = "";
+    this.Status = "";
+    this.setUserName = function(n){
+        this.UserName = n;
         this.propertyChange();
     };
-    this.setImg = function(n){
-        this.imgUrl = n;
+    this.setHeadImg = function(n){
+        this.HeadImg = n;
         this.propertyChange();
     };
-    this.setLogName = function(n){
-        this.logName = n;
+    this.setStatus = function(n){
+        this.Status = n;
         this.propertyChange();
     };
     this.propertyChange = function(){
         ReactDOM.render(
-            React.createElement(UserInfo,{Name:this.name,ImgUrl:this.imgUrl,LogName:this.logName}),
+            React.createElement(UserInfo,{Name:this.UserName,ImgUrl:this.HeadImg,LogName:this.Status}),
             document.getElementById("userInfo")
         );
     }
 }
 
-
+/*nowDate可改。*/
 var nowDate = new NewDate();
 
 
 
 
 ReactDOM.render(
-    React.createElement(UserInfo,{Name:nowDate.name,ImgUrl:nowDate.imgUrl,LogName:nowDate.logName}),
+    React.createElement(UserInfo,{Name:nowDate.UserName,ImgUrl:nowDate.HeadImg,LogName:nowDate.Status}),
     document.getElementById("userInfo")
 );
 

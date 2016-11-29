@@ -27,14 +27,14 @@
                 $(".tab_group .list.tab_2").css("height",window.innerHeight-177-35);
                 $(".tab_group .list.tab_3").css("height",window.innerHeight-177-35);
             });
-            $(".history-list li").each(function(){
-                if($(this).attr("data-message")){
-                    $(this).find(".message").css("width", 20);
-                    $(this).find(".message").text($(this).attr("data-message"));
-                }else {
-                    $(this).find(".message").css("width", 0)
-                }
-            });
+//            $(".history-list li").each(function(){
+//                if($(this).attr("data-message")){
+//                    $(this).find(".message").css("width", 20);
+//                    $(this).find(".message").text($(this).attr("data-message"));
+//                }else {
+//                    $(this).find(".message").css("width", 0)
+//                }
+//            });
             $(".friend-title").on("click",function(){
                 $(this).next(".friend-list").slideToggle();
                 if($(this).find("span[class*=icon-]").attr("class")=="icon-caret-down"){
@@ -105,7 +105,7 @@
             <i class=" icon-group"></i>
         </a>
     </div>
-    <div class="list tab_1">
+    <div class="list tab_1" id="FriendListOfHistory">
         <ul class="history-list">
             <li class="has-message" data-message="5">
                 <a href="#" class="db">

@@ -1,3 +1,4 @@
+/*朋友列表分组标题*/
 var FriendTitle = React.createClass({
     displayName: "FriendTitle",
     render:function(){
@@ -14,12 +15,15 @@ var FriendTitle = React.createClass({
         );
     }
 });
+/*朋友列表*/
 var FriendList = React.createClass({
     displayName:"FriendList",
     render:function(){
         var row = [];
-        for(var i = 0; i<this.props.FriendDate.length;i++){
+        var OnlineNumber = 0;
+        for(var i=0; i<this.props.FriendDate.length; i++){
             if(this.props.FriendDate[i].online){
+                OnlineNumber++;
                 row.unshift(
                     React.createElement(FriendItem,{
                         onlineTag:this.props.FriendDate[i].online,
@@ -46,11 +50,12 @@ var FriendList = React.createClass({
         )
     }
 });
+/*单个列表单元*/
 var FriendItem = React.createClass({
     displayName:"FriendItem",
     render:function(){
         return(
-            React.createElement("li",{className:this.props.onlineTag ? "online-item" :""},
+            React.createElement("li",{className:this.props.onlineTag ? "online-item" :"",onDoubleClick:this.HandleDoubleClick},
                 React.createElement("a",{
                     href:"./chat-tab.html?"+this.props.jid+"&"+this.props.imgUrl+"&"+this.props.name+"&"+this.props.job,
                     target:"_black"
@@ -63,51 +68,172 @@ var FriendItem = React.createClass({
                 )
             )
         );
+    },
+    HandleDoubleClick:function () {
+
     }
 });
-
+/*朋友列表分组单元*/
 var FriendSection = React.createClass({
     displayName:"FriendSection",
     render:function(){
+        var Row =[];
+        for(var i=0; i<this.props.FriendDate.length; i++){
+            var OnlineNumber = 0;
+            for(var j=0; j<this.props.FriendDate[i].Users.length; j++){
+                if(this.props.FriendDate[i].Users[j].online){
+                    OnlineNumber++;
+                }
+            }
+            Row.push(
+                React.createElement(FriendTitle,{
+                    friendTitle:this.props.FriendDate[i].GroupName,
+                    onlineNumber:OnlineNumber,
+                    totalNumber:this.props.FriendDate[i].Users.length
+                })
+            );
+            Row.push(
+                React.createElement(FriendList,{
+                    FriendDate:this.props.FriendDate[i].Users
+                })
+            );
+        }
         return(
-            React.createElement("div",{},
-                React.createElement("FriendTitle",{friendTitle:""})
-            )
+            React.createElement("div",{},Row)
         );
     }
 
 });
+
+
+
+
+
+/*聊天历史纪录列表*/
+var FriendListOfHistory = React.createClass({
+    displayName:"FriendListOfHistory",
+    render:function () {
+        return(
+            React.createElement("ul",{className:"history-list"})
+        )
+    }
+});
+/*聊天历史纪录列表单元*/
+var FriendListOfHistoryItem = React.createClass({
+    displayName:"FriendListOfHistoryItem",
+    getInitialState:function () {
+        return{
+            UnreadMessageLength:this.props.UnreadMessageLength
+        }
+    },
+    render:function () {
+        return(
+            React.createElement("li",{className:this.state.UnreadMessageLength ? "has-message" :""},
+                React.createElement("a",{className:"db"},
+                    React.createElement("img",{className:"db fl",src:this.props.UserImg}),
+                    React.createElement("div",{className:"info"},
+                        React.createElement("div",{className:"name"},this.props.UserName),
+                        React.createElement("div",{className:"job"},this.props.job)
+                    ),
+                    React.createElement("div",{className:"abs message"},this.state.UnreadMessageLength)
+                )
+            )
+        )
+    }
+});
+
+
+
+
+
+
+
 //获取数据。
 function FriendsDate(){
-    this.getFriendList = function(url){
-        console.log("kaishi");
-        this.date = "";
-        $.ajax({
-            url:url,
-            async:false,
-            type:"GET",
-            dataType:"json",
-            cache:false,
-            success:function(data){
-                this.date = data;
-                ReactDOM.render(
-                    React.createElement(FriendList,{FriendDate:data}),
-                    document.getElementById("friend-list")
-                );
-            }.bind(this),
-            error:function(error){
-                console.log(error);
-                alert("网络通讯阻塞，请稍后重试……")
-            }
-        });
-        return this.date;
+    this.FriendList = [];
+    this.getFriendList = function(data){
+        this.FriendList = data.data;
+        this.propertyChange();
     };
+    this.propertyChange = function(){
+        ReactDOM.render(
+            React.createElement(FriendSection,{FriendDate:this.FriendList}),
+            document.getElementById("friend-list")
+        );
+    }
 }
+var TestDate = {
+    "data": [
+        {
+            "GroupID": 1,
+            "GroupName": "小学同学",
+            "Users": [
+                {
+                    "jid": "15010206358@10.185.1.95",
+                    "online": true,
+                    "username": "15010206358",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                },
+                {
+                    "jid": "刘亚东@10.185.1.95",
+                    "online": true,
+                    "username": "刘亚东",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                },
+                {
+                    "jid": "kjc\\40nefu.edu.cn@10.185.1.95",
+                    "online": false,
+                    "username": "范金凤",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                },
+                {
+                    "jid": "liu_77\\40163.com@10.185.1.95",
+                    "online": false,
+                    "username": "刘凤利",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                }
+            ]
+        },
+        {
+            "GroupID": 2,
+            "GroupName": "中学同学",
+            "Users": [
+                {
+                    "jid": "15010206358@10.185.1.95",
+                    "online": false,
+                    "username": "15010206358",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                },
+                {
+                    "jid": "刘亚东@10.185.1.95",
+                    "online": true,
+                    "username": "刘亚东",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                },
+                {
+                    "jid": "kjc\\40nefu.edu.cn@10.185.1.95",
+                    "online": false,
+                    "username": "范金凤",
+                    "imgUrl": "images/user-img.png",
+                    "job": "局长"
+                }
+            ]
+        }
+    ]
+};
+
+
 
 var nowFriendsDate = new FriendsDate();
-//console.log(nowFriendsDate.getFriendList("test.json"));
+nowFriendsDate.getFriendList(TestDate);
 ReactDOM.render(
-    React.createElement(FriendList,{FriendDate:nowFriendsDate.getFriendList("test.json")}),
+    React.createElement(FriendSection,{FriendDate:nowFriendsDate.FriendList}),
     document.getElementById("friend-list")
 );
 

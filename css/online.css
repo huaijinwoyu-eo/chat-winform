@@ -82,6 +82,7 @@
 .user-info .info ul.abs li{
     border-bottom: 1px solid #cccbd0;
     line-height: 25px;
+    cursor: pointer;
 }
 .user-info .info .w20{
     text-align: center;
@@ -262,7 +263,6 @@
     top: 15px;
     right: 20px;
     background: #f56c0b;
-    height: 20px;
     width: 20px;
     text-align: center;
     line-height: 20px;
@@ -280,6 +280,9 @@
 }
 .friend-title span[class*=icon-]{
     color: #999999;
+}
+.friend-list{
+    display: none;
 }
 .friend-list li{
     padding: 5px;
