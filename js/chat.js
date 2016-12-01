@@ -1,4 +1,4 @@
-//聊天窗口对象信息组件。
+//聊天窗口对象信息组件（聊天对象）。
 var ChatObjInfo = React.createClass({
     render:function(){
         return(
@@ -16,23 +16,39 @@ var ChatObjInfo = React.createClass({
         )
     }
 });
-//聊天信息组件
+//////////////////////////////////////////////////////////////////////////
+/*获取当前时间*/
+function getNowDate() {
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var day = date.getDay();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var string = year+"-"+month+"-"+day+" "+hours+":"+minutes;
+    return string;
+}
+//////////////////////////////////////////////////////////////////////////
+//聊天信息组件（消息列表以及消息发送组件）
 var ChatFormAndMessage = React.createClass({
     getInitialState:function(){
         return{
-            data:""
+            data:this.props.data
         }
     },
     HandleSubmit:function(item){
         var addItem = {};
-        addItem.id = this.state.data.length+2;
-        addItem.type="chat-my";
-        addItem.message=item;
+        addItem.issend = true;
+        addItem.content = item;
+        addItem.date = getNowDate();
         var MessageData = this.state.data;
         MessageData.push(addItem);
         this.setState({
             data:MessageData
-        })
+        },function () {
+            addItem = null;
+            MessageData = null;
+        });
     },
     render:function(){
         return(
@@ -41,32 +57,18 @@ var ChatFormAndMessage = React.createClass({
                 React.createElement(ChatInput,{SubmitMethod:this.HandleSubmit})
             )
         )
-    },
-    componentWillMount:function(){
-        $.ajax({
-            url:"message.json",
-            type:"GET",
-            dataType:"json",
-            success:function(data){
-                this.setState({
-                    data:data
-                })
-            }.bind(this),
-            error:function(error){
-                console.log(error)
-            }
-        })
     }
 });
+/*消息列表*/
 var ChatBox = React.createClass({
     componentDidUpdate:function(){
-        $(".chat-content").scrollTop($(".chat-content")[0].clientHeight)
+        $(".chat-content").scrollTop($(".chat-content")[0].scrollHeight);
     },
     render:function(){
         var newDate =[];
-        for(var i in this.props.data){
+        for(var i =0; i<this.props.data.length; i++){
             newDate.push(
-                React.createElement(ChatMessage,{key:this.props.data[i].id,type:this.props.data[i].type,message:this.props.data[i].message})
+                React.createElement(ChatMessage,{key:this.props.data[i].key,message:this.props.data[i]})
             )
         }
         return(
@@ -74,17 +76,38 @@ var ChatBox = React.createClass({
         )
     }
 });
+/*消息列表单元*/
 var ChatMessage = React.createClass({
     render:function(){
-        return(
-            React.createElement("div",{className:"chat-item clearfix"},
-                React.createElement("div",{className:this.props.type},
-                    this.props.message
+        if(this.props.message.issend){
+            return(
+                React.createElement("div",{className:"chat-item clearfix"},
+                    React.createElement("div",{className:"chat-my"},
+                        React.createElement("div",{className:"message-author"},
+                            React.createElement("span",{className:"yourself"},"我"),
+                            React.createElement("span",{className:"time"},this.props.message.date)
+                        ),
+                        React.createElement("div",null,this.props.message.content)
+                    )
                 )
             )
-        )
+        }else {
+            return(
+                React.createElement("div",{className:"chat-item clearfix"},
+                    React.createElement("div",{className:"chat-other"},
+                        React.createElement("div",{className:"message-author"},
+                            React.createElement("span",{className:"time"},this.props.message.date),
+                            React.createElement("span",{className:"yourself"},this.props.message.nickname)
+
+                        ),
+                        React.createElement("div",null,this.props.message.content)
+                    )
+                )
+            )
+        }
     }
 });
+/*聊天输入框部分组件*/
 var ChatInput = React.createClass({
     render:function(){
         return(
@@ -95,6 +118,7 @@ var ChatInput = React.createClass({
         )
     }
 });
+/*聊天辅助功能，包括字体，表情等。*/
 var ChatFunctionItem = React.createClass({
     render:function(){
         return(
@@ -119,6 +143,7 @@ var ChatFunctionItem = React.createClass({
         )
     }
 });
+/*输入框以及发送按钮。*/
 var ChatSubmit = React.createClass({
     getInitialState:function(){
         return{
@@ -127,16 +152,15 @@ var ChatSubmit = React.createClass({
     },
     HandleSubmit:function(event){
         event.preventDefault();
-        this.props.SubmitMethod(this.state.text);
-        this.setState({
-            text:""
-        });
-        $.ajax({
-            url:"./messages.json",
-            type:"POST",
-            dataType:"json",
-            data:this.state.text
-        })
+        if(this.state.text){
+            this.props.SubmitMethod(this.state.text);
+            /*消息发送*/
+            window.external.API_SendMsg(this.state.text);
+            this.setState({
+                text:""
+            });
+        }
+
     },
     HandleChange:function(event){
         this.setState({
@@ -152,12 +176,58 @@ var ChatSubmit = React.createClass({
         )
     }
 });
-var href = window.location.search.slice(1).split("&");
+
+/*聊天对象信息设置*/
+function SetUserInfo() {
+    this.name = "";
+    this.imgurl = "";
+    this.job = "";
+    this.setUserInfo = function (data) {
+        var ObjectData = JSON.parse(data);
+        this.name = ObjectData.user.nickname;
+        this.imgurl = ObjectData.user.imgurl;
+        this.job = ObjectData.user.job;
+        this.propertyChange();
+    };
+    this.propertyChange = function () {
+        ReactDOM.render(
+            React.createElement(ChatObjInfo,{
+                imgUrl:this.imgurl,
+                name:this.name,
+                job:this.job
+            }),
+            document.getElementById("chat-object")
+        );
+    }
+}
+var ChatObject = new SetUserInfo();
 ReactDOM.render(
-    React.createElement(ChatObjInfo,{imgUrl:href[1],name:decodeURI(href[2]),job:decodeURI(href[3])}),
+    React.createElement(ChatObjInfo,{
+        imgUrl:ChatObject.imgurl,
+        name:ChatObject.name,
+        job:ChatObject.job
+    }),
     document.getElementById("chat-object")
 );
+
+/*聊天消息添加*/
+function AddMsg() {
+    this.msg = [];
+    this.AddMsg = function (data) {
+        var ObjectData = JSON.parse(data);
+        ObjectData.msg.key = Math.random(new Date())*1000;
+        this.msg.push(ObjectData.msg);
+        this.propertyChange();
+    };
+    this.propertyChange = function () {
+        ReactDOM.render(
+            React.createElement(ChatFormAndMessage,{data:this.msg}),
+            document.getElementById("chat-content")
+        )
+    }
+}
+var AddMessage = new AddMsg();
 ReactDOM.render(
-    React.createElement(ChatFormAndMessage,null),
+    React.createElement(ChatFormAndMessage,{data:AddMessage.msg}),
     document.getElementById("chat-content")
 );

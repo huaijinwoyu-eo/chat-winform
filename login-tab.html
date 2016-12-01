@@ -9,7 +9,7 @@
     <title>Title</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
-    <script src="js/main-chat.js"></script>
+    <!--<script src="js/main-chat.js"></script>-->
     <script>
         $(function(){
             $(".chat-content").css("height",window.innerHeight-210);
@@ -34,11 +34,11 @@
             </div>
             <div class="form-input fl">
                 <input type="text" class="number" placeholder="请输入账号">
-                <input type="text" class="password" placeholder="请输入密码">
+                <input type="password" class="password" placeholder="请输入密码">
                 <input type="checkbox">
-                <label for="">记住密码</label>
+                <label>记住密码</label>
                 <input type="checkbox" style="margin-left: 47px;">
-                <label for="">自动登录</label>
+                <label>自动登录</label>
                 <input type="button" value="登录">
             </div>
             <div class="fl">
@@ -47,5 +47,6 @@
             </div>
         </div>
     </div>
+    <script src="js/login.js"></script>
 </body>
 </html>

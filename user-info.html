@@ -35,14 +35,14 @@
 //                    $(this).find(".message").css("width", 0)
 //                }
 //            });
-            $(".friend-title").on("click",function(){
-                $(this).next(".friend-list").slideToggle();
-                if($(this).find("span[class*=icon-]").attr("class")=="icon-caret-down"){
-                    $(this).find("span[class*=icon-]").removeClass("icon-caret-down").addClass("icon-caret-right");
-                }else {
-                    $(this).find("span[class*=icon-]").removeClass("icon-caret-right").addClass("icon-caret-down");
-                }
-            })
+//            $(".friend-title").off("click").on("click",function(){
+//                $(this).next(".friend-list").slideToggle();
+//                if($(this).find("span[class*=icon-]").attr("class")=="icon-caret-down"){
+//                    $(this).find("span[class*=icon-]").removeClass("icon-caret-down").addClass("icon-caret-right");
+//                }else {
+//                    $(this).find("span[class*=icon-]").removeClass("icon-caret-right").addClass("icon-caret-down");
+//                }
+//            })
         })
     </script>
 </head>
@@ -186,12 +186,18 @@
         <ul class="friend-list">
             <li class="online-item">
                 <a href="#">
-                    <img src="images/user-img.png" alt="" class="db fl">
+                    <div class="img">
+                        <img src="images/user-img.png" alt="" class="db fl">
+                        <div class="onlineTag">
+                            离线
+                        </div>
+                    </div>
+
                     <div class="info">
                         <div class="name">axx</div>
                         <div class="job">(局长)</div>
                     </div>
-                    <div class="abs online-tips"></div>
+                    <div class="abs message">3</div>
                 </a>
             </li>
         </ul>
@@ -227,5 +233,7 @@
 </div>
 <script src="js/online.js"></script>
 <script src="js/friend-list.js"></script>
+<script src="js/history-list.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

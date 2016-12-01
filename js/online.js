@@ -14,11 +14,14 @@ var UserInfo = React.createClass({displayName: "UserInfo",
             LogName:event.target.value
         })
     },
+    HandleCLick:function () {
+        alert(localStorage.getItem("Jid"));
+    },
     render:function(){
         return(
             React.createElement("div",{},
                 React.createElement("div",{className:"img"},
-                    React.createElement("img",{src:this.props.ImgUrl})
+                    React.createElement("img",{src:this.props.ImgUrl,onClick:this.HandleCLick})
                 ),
                 React.createElement("div",{className:"info"},
                     React.createElement("div",{className:"state dib"},
@@ -89,7 +92,6 @@ function NewDate(){
 
 /*nowDate可改。*/
 var nowDate = new NewDate();
-
 
 
 

@@ -293,24 +293,32 @@
     display: block;
     cursor: pointer;
 }
-.friend-list li img{
+.friend-list li .img{
     height: 45px;
     width: 45px;
     border-radius: 5px;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    position: relative;
 }
-.friend-list li.online-item img{
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    filter: grayscale(0%);
-    filter: ;
+.friend-list li .img .onlineTag{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("../images/trans50.png") repeat;
+    height: 20px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 8px;
+}
+.friend-list li .img img{
+    height: 100%;
+}
+.friend-list li.online-item .img .onlineTag{
+    display: none;
 }
 .friend-list li::after{
     clear:both;
@@ -333,21 +341,18 @@
 .friend-list li.online-item img{
     border: 1px solid #20a688;
 }
-/*.friend-list li.online-item .online-tips{*/
-    /*width: 15px;*/
-/*}*/
-/*.friend-list li .online-tips{*/
-    /*top: 15px;*/
-    /*right: 20px;*/
-    /*background: #3ead5d;*/
-    /*height: 15px;*/
-    /*text-align: center;*/
-    /*line-height: 20px;*/
-    /*-webkit-border-radius:50%;*/
-    /*-moz-border-radius:50%;*/
-    /*border-radius:50%;*/
-    /*color: #ffffff;*/
-/*}*/
+.friend-list li .message{
+    top: 15px;
+    right: 20px;
+    background: #f56c0b;
+    min-width: 20px;
+    text-align: center;
+    line-height: 20px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    color: #ffffff;
+}
 .group-list li{
     padding: 5px;
     border-bottom: 1px solid #cccccc;
@@ -511,6 +516,31 @@
     top: 5px;
     right: -18px;
 }
+.chat-content .chat-other .message-author{
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    overflow: visible;
+    white-space: nowrap;
+}
+.chat-content .chat-my .message-author{
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    overflow: visible;
+    white-space: nowrap;
+}
+.chat-content .message-author .yourself{
+    color: #519e3e;
+    font-size: 12px;
+    margin: 0 5px;
+}
+.chat-content .message-author .time{
+    color: #929090;
+    font-size: 10px;
+}
+
+
 
 .chat-login{
     background: url("../images/chat-login.png") no-repeat center top /100% 190px;
@@ -543,7 +573,7 @@
     width: 200px;
     margin: 0 10px;
 }
-.login-form .form-input input[type=text]{
+.login-form .form-input input[type=text],.login-form .form-input input[type=password]{
     width: 100%;
     height: 30px;
     line-height: 30px;
