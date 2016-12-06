@@ -21,11 +21,13 @@
             $(".tab_group .list.tab_1").css("height",window.innerHeight-177-35);
             $(".tab_group .list.tab_2").css("height",window.innerHeight-177-35);
             $(".tab_group .list.tab_3").css("height",window.innerHeight-177-35);
+            $("#Search .ResultList").css("height",window.innerHeight-177);
             $(window).resize(function(){
                 $(".tab_group").css("height",window.innerHeight-177);
                 $(".tab_group .list.tab_1").css("height",window.innerHeight-177-35);
                 $(".tab_group .list.tab_2").css("height",window.innerHeight-177-35);
                 $(".tab_group .list.tab_3").css("height",window.innerHeight-177-35);
+                $("#Search .ResultList").css("height",window.innerHeight-177);
             });
 //            $(".history-list li").each(function(){
 //                if($(this).attr("data-message")){
@@ -88,9 +90,20 @@
             </div>
         </div>
     </div>
-    <div class="search">
+    <div class="search" id="Search">
         <input type="text" class="fl" placeholder="搜索联系人、群">
         <input type="button" class="fr">
+        <div class="ResultList">
+            <div class="ListItem clearfix">
+                <div class="img">
+                    <img src="images/user-img.png" alt="">
+                </div>
+                <div class="info">
+                    <span class="name">axx</span>
+                    <span class="status">局长</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="tab_group">
@@ -226,7 +239,7 @@
 
 
 <div class="bottom">
-    <input type="button" class="setting fl">
+    <input type="button" class="setting fl" onclick="localStorage.clear();">
     <input type="button" class="volume fl">
     <input type="button" class="plus fl">
     <input type="button" class="menu fr">
@@ -235,5 +248,6 @@
 <script src="js/friend-list.js"></script>
 <script src="js/history-list.js"></script>
 <script src="js/login.js"></script>
+<!--<script src="js/search.js"></script>-->
 </body>
 </html>

@@ -11,6 +11,20 @@ var FriendListOfHistory = React.createClass({
                 HistoryList[CurrentJid] = [];
             }
             for(var i=0; i<HistoryList[CurrentJid].length; i++){
+                if(HistoryList[CurrentJid][i].NewOne){
+                    Temp.unshift(
+                        React.createElement(FriendListOfHistoryItem,{
+                            onlineTag:HistoryList[CurrentJid][i].onlineTag,
+                            imgUrl:HistoryList[CurrentJid][i].imgUrl,
+                            key:HistoryList[CurrentJid][i].jid,
+                            jid:HistoryList[CurrentJid][i].jid,
+                            name:HistoryList[CurrentJid][i].name,
+                            job:HistoryList[CurrentJid][i].job,
+                            UnreadMessageLength:HistoryList[CurrentJid][i].UnreadMessageLength,
+                            group:HistoryList[CurrentJid][i].group
+                        })
+                    );
+                }
                 Temp.push(
                     React.createElement(FriendListOfHistoryItem,{
                         onlineTag:HistoryList[CurrentJid][i].onlineTag,

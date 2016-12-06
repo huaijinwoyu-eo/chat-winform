@@ -1,63 +1,1912 @@
 {
-  "data": [
+  "Data": [
     {
-      "GroupID": 1,
-      "GroupName": "小学同学",
+      "GroupID": 3,
+      "GroupName": "中国林学会",
       "Users": [
         {
-          "jid": "15010206358@10.185.1.95",
-          "online": true,
-          "username": "15010206358",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
+          "Jid": "15010206358@10.185.1.95",
+          "Online": false,
+          "UserName": "15010206358",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
         },
         {
-          "jid": "刘亚东@10.185.1.95",
-          "online": true,
-          "username": "刘亚东",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
+          "Jid": "刘亚东@10.185.1.95",
+          "Online": false,
+          "UserName": "刘亚东",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
         },
         {
-          "jid": "kjc\\40nefu.edu.cn@10.185.1.95",
-          "online": true,
-          "username": "范金凤",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
+          "Jid": "kjc\\40nefu.edu.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "范金凤",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
         },
         {
-          "jid": "liu_77\\40163.com@10.185.1.95",
-          "online": true,
-          "username": "刘凤利",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
-        }
-      ]
-    },
-    {
-      "GroupID": 2,
-      "GroupName": "中学同学",
-      "Users": [
-        {
-          "jid": "15010206358@10.185.1.95",
-          "online": false,
-          "username": "15010206358",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
+          "Jid": "liu_77\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "刘凤利",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
         },
         {
-          "jid": "刘亚东@10.185.1.95",
-          "online": true,
-          "username": "刘亚东",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
+          "Jid": "13895900259\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "赵中南",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
         },
         {
-          "jid": "kjc\\40nefu.edu.cn@10.185.1.95",
-          "online": false,
-          "username": "范金凤",
-          "imgUrl": "images/user-img.png",
-          "job": "局长"
+          "Jid": "1094659991\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王子隆",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1140840597\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈亚立",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lilingdi@10.185.1.95",
+          "Online": false,
+          "UserName": "李玲娣",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15201245360@10.185.1.95",
+          "Online": false,
+          "UserName": "15201245360",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "caijinfeng1984\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "蔡金峰",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "45304324\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "hanjia",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhb512120\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张彪",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "381893612\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "381893612\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "sichanlandag\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "sichanlandag\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yufeichen2002\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈宇飞",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13801279378@10.185.1.95",
+          "Online": false,
+          "UserName": "秦向华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "scqnnd118\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "钟平华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "cqliuliang\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "刘亮",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "2858227869\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "苏星熠",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1592558133\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "蒋圳良",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zzy2slc\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "zzy2slc\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "panjin@10.185.1.95",
+          "Online": false,
+          "UserName": "panjin",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhaoxumao\\40yeah.net@10.185.1.95",
+          "Online": false,
+          "UserName": "赵序茅",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "2558353728\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "2558353728\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "nieyanli\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "聂艳丽",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "18210456843@10.185.1.95",
+          "Online": false,
+          "UserName": "18210456843",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhaomengqingmike\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "赵梦清",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hebeirishang\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "范艳兵",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "辛兵@10.185.1.95",
+          "Online": false,
+          "UserName": "辛兵",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "尹传红@10.185.1.95",
+          "Online": false,
+          "UserName": "尹传红",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "李天送@10.185.1.95",
+          "Online": false,
+          "UserName": "李天送",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "279789188\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "魏婕轩",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhaopf834\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "赵鹏飞",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "epasoge-1845\\40yopmail.com@10.185.1.95",
+          "Online": false,
+          "UserName": "epasoge-1845\\40yopmail.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "963665252\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "杨健",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "bianjing31\\40bjfu.edu.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "bianjing31\\40bjfu.edu.cn",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1308212090\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张娜",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "mr.anderson@127.0.0.1",
+          "Online": false,
+          "UserName": "Mr.Anderson",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15007901395@10.185.1.95",
+          "Online": false,
+          "UserName": "姚甲宝",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wum299\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "wum299\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "345988969\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张跃明",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "18631243721@10.185.1.95",
+          "Online": false,
+          "UserName": "李超ddasdf",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "rainy@10.185.1.95",
+          "Online": false,
+          "UserName": "linye",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "linyekepu\\40sohu.com@10.185.1.95",
+          "Online": false,
+          "UserName": "万志红",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "peinancai\\40aliyun.com@10.185.1.95",
+          "Online": false,
+          "UserName": "裴男才",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "孙哲@10.185.1.95",
+          "Online": false,
+          "UserName": "孙哲",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13752093826@10.185.1.95",
+          "Online": false,
+          "UserName": "13752093826",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "252351024\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "252351024\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wypeasy\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王亚萍",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "519106213\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "519106213\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "xiaochen0213\\40sohu.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈乐成",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "84902686\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈功健",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "asdf\\40xiaoxiaotong.org@10.185.1.95",
+          "Online": false,
+          "UserName": "asdf\\40xiaoxiaotong.org",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "bjfuwxx\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王晓旭",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "tiancai21shizhu\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "梅西",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "421490316\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "421490316\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "30295854\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张锴",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "25433134\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "25433134\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "tongfangping\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "tongfangping\\40sina.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wanzhihong\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "万志红",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "22010230\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "韦维",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13463121352\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "13463121352\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hbuhan@10.185.1.95",
+          "Online": false,
+          "UserName": "hbuhan",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "nancai.pei\\40gmail.com@10.185.1.95",
+          "Online": false,
+          "UserName": "nancai.pei\\40gmail.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "kych.5578\\40aliyun.com@10.185.1.95",
+          "Online": false,
+          "UserName": "kych.5578\\40aliyun.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lichao\\40xiaoxiaotong.org@10.185.1.95",
+          "Online": false,
+          "UserName": "李超",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "qinxianghua@10.185.1.95",
+          "Online": false,
+          "UserName": "秦向华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "majianwei@10.185.1.95",
+          "Online": false,
+          "UserName": "马建维",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "342468753\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "宋文",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "tslkywxy\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王晓英",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "chenlj@10.185.1.95",
+          "Online": false,
+          "UserName": "chenlj",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15010940105\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "15010940105\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lypbox\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "lypbox\\40126.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13641344521@10.185.1.95",
+          "Online": false,
+          "UserName": "陈立军",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "houch\\40caf.ac.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "侯春华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13466389651\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张依雯",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "luckylu2001\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "卢宇飏",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hanjing013\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "韩静华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "ynslytzn\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "赵南",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13693647470\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "13693647470\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hcz3736\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "黄存忠",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wzyang2004\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "杨文忠",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "asdddf\\40xiaoxiaotong.org@10.185.1.95",
+          "Online": false,
+          "UserName": "asdddf\\40xiaoxiaotong.org",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "newsedit@10.185.1.95",
+          "Online": false,
+          "UserName": "新闻编辑",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zxy8448\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张新宇",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "唐红英@10.185.1.95",
+          "Online": false,
+          "UserName": "唐红英",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "754574003\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "敏",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "596005187\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "596005187\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "issemmaweff-6162\\40yopmail.com@10.185.1.95",
+          "Online": false,
+          "UserName": "issemmaweff-6162\\40yopmail.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wetlands108\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "崔丽娟",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13513010178\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "13513010178\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "qinxh9822\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "qinxh9822\\40sina.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "cissyo\\40vip.qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "cissyo\\40vip.qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zjslxh2013\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "徐翠霞",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lichao1@10.185.1.95",
+          "Online": false,
+          "UserName": "李超1",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "xmkang\\40ucas.ac.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "xmkang\\40ucas.ac.cn",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yitousuanwf\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "yitousuanwf\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "llxwhq\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "llxwhq\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "101985312\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李秀雷",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "skywalker2001\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张宇轩",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lxixl\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "佟庆",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13641241396@10.185.1.95",
+          "Online": false,
+          "UserName": "13641241396",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yulisbz\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "吕玉里",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "mhhogress\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李蕴峰",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "summercamp@10.185.1.95",
+          "Online": false,
+          "UserName": "夏令营管理员",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "280994028\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "戴红光",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yubiao@10.185.1.95",
+          "Online": false,
+          "UserName": "于彪",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15776892757@10.185.1.95",
+          "Online": false,
+          "UserName": "15776892757",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "xinjingdi\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "xinjingdi\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "fjdgc\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "丁国昌",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yabkpxj\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈远书",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1736477937\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张颖宜",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "2637367459\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "2637367459\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "单长勇@10.185.1.95",
+          "Online": false,
+          "UserName": "单长勇",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "jxstzx\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "刘飒",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1819553719\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1819553719\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "shaanxilxh\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "惠宁",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "162980\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李超",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "xzy1974\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "xzy1974\\40126.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "593251135\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "新疆艾比湖湿地国家级自然保护区",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "rainy",
+          "Online": false,
+          "UserName": null,
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "834365484\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张荣贵",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "slxh_693\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "slxh_693\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zouwentao1982\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "zouwentao1982\\40126.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "shihua19870327\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "石华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "kjgfri\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "潘文",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "liberisa\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "liberisa\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "929884177\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李玲",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "69787675\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈艺",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "39600349\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "武阿莉",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "18010028329@10.185.1.95",
+          "Online": false,
+          "UserName": "李平",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hadenglong\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "哈登龙",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "jxslxh1979\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王锦华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "吕光辉@10.185.1.95",
+          "Online": false,
+          "UserName": "吕光辉",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "test33@10.185.1.95",
+          "Online": false,
+          "UserName": "123123",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13520002199@10.185.1.95",
+          "Online": false,
+          "UserName": "13520002199",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "eyxtsh\\40sohu.com@10.185.1.95",
+          "Online": false,
+          "UserName": "夏同胜",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1512589500\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1512589500\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "3088627516\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "戴红光",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "342675091\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "342675091\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "ztljkjk\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "ztljkjk\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "412203314\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王齐瑞",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15270224272\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "15270224272\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hhdingfeng\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "丁峰",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "liping_198910\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李平",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13521087197@10.185.1.95",
+          "Online": false,
+          "UserName": "13521087197",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "3147893717\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王奕博",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "491875557\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "491875557\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "dzcha\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈淮安",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15233120729@10.185.1.95",
+          "Online": false,
+          "UserName": "张彪",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "15010940105\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李梓琛",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "168848091\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张轩",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "2392089939\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李文显",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "厉建祝@10.185.1.95",
+          "Online": false,
+          "UserName": "厉建祝",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1409571132\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1409571132\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "ueslear\\40outlook.com@10.185.1.95",
+          "Online": false,
+          "UserName": "ueslear\\40outlook.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "316654532\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "黎薇",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "ylzx101\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "ylzx101\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hbulichao\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李超",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13810752572@10.185.1.95",
+          "Online": false,
+          "UserName": "13810752572",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "luojianisi\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "雒静",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "184027594\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张华林",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zpzhidong\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "蒋志东",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "an-f\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "an-f\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "test1@10.185.1.95",
+          "Online": false,
+          "UserName": "test",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "cwy_forest\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "cwy_forest\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "uslear\\40outlook.com@10.185.1.95",
+          "Online": false,
+          "UserName": "秋若水",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "fjdgc\\40fafu.edu.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "fjdgc\\40fafu.edu.cn",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lnslxh\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "吴杨",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhangbiao@10.185.1.95",
+          "Online": false,
+          "UserName": "张彪",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "test2@10.185.1.95",
+          "Online": false,
+          "UserName": "sad",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "a84238861\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "梦梦",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "test3@10.185.1.95",
+          "Online": false,
+          "UserName": "123123",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "52897562\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李超Test",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "kaolakaola1987\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "崔丽娟",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yongbowu\\40njfu.com.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "吴永波",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1656533774\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1656533774\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lzf142857\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "刘子枫",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1759125411\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "李坤译",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "gzritf\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "宋湘豫",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "沈贵@10.185.1.95",
+          "Online": false,
+          "UserName": "沈贵",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1365057099\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "韦荣华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lhlxh7078\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "漯河市林学会",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "chenlijun\\40xiaoxiaotong.org@10.185.1.95",
+          "Online": false,
+          "UserName": "chenlijun\\40xiaoxiaotong.org",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "coco227\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "肖景晨",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lidongsheng0827\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "lidongsheng0827\\40sina.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "18910736768@10.185.1.95",
+          "Online": false,
+          "UserName": "18910736768",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "sichanlandag\\40gmail.com@10.185.1.95",
+          "Online": false,
+          "UserName": "sichanlandag\\40gmail.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "28110073362\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "28110073362\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "877566062\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "877566062\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "kjc\\40nufu.edu.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "kjc\\40nufu.edu.cn",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1196267546\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "豆祥贺",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "56285088\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张彩霞",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "gxlxhui\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "周卫玲",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "kejichuluoht\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "罗洪涛",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "2395994049\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王申",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "553952856\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "方执熙",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "412622549\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "陈红岩",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "newsedit2@10.185.1.95",
+          "Online": false,
+          "UserName": "新闻编辑",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "ye0033\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "叶胜忠",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "chenlijun\\40cyscc.org@10.185.1.95",
+          "Online": false,
+          "UserName": "陈立军",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "icenwong\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王怡径然",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "853488156\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "853488156\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "452633725\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "452633725\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "bjfs\\40bjfs.org.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "邵丹",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "mark_niu2005\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "牛晓霆",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1512589500\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1512589500\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhangkai360973\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张凯",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1848858870\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1848858870\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wushichu2000\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "吴世初",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13868141030\\40139.com@10.185.1.95",
+          "Online": false,
+          "UserName": "谢锦忠",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "573469309\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "舒宏敏",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "王直华@10.185.1.95",
+          "Online": false,
+          "UserName": "王直华",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "abhkyxj\\40sina.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "新疆艾比湖湿地国家级自然保护区",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "gjsdhr\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "gjsdhr\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "fjslxh\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "林庆源",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1824646513\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "邱梓峰",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1527022427\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "1527022427\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "805401583\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "谷阳",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "hjian\\40caf.ac.cn@10.185.1.95",
+          "Online": false,
+          "UserName": "hjian\\40caf.ac.cn",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "lichao2@10.185.1.95",
+          "Online": false,
+          "UserName": "李超2",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wangkang\\40beijingbg.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王康",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "281974544\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "281974544\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "13653260464\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "13653260464\\40qq.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "1403565844\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "郭昊",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "sunkai_bj\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "孙锴",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wangmin\\40xiaoxiaotong.org@10.185.1.95",
+          "Online": false,
+          "UserName": "王敏",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "642275303\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "仲浩",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "gyt87914402\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "甘桂芳",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "cvbfgs\\40qq.com@10.185.1.95",
+          "Online": false,
+          "UserName": "范一安",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "bjlydxzh\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张骅",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "mengqingwu500\\40126.com@10.185.1.95",
+          "Online": false,
+          "UserName": "孟庆武",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "yeqiaolincom\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "业巧林",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "csf999\\40sina.com@10.185.1.95",
+          "Online": false,
+          "UserName": "郭建斌",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "wangrui102\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "王瑞",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "zhangangang2013\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "张岗岗",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "18510700201@10.185.1.95",
+          "Online": false,
+          "UserName": "连晓鹏",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
+        },
+        {
+          "Jid": "cbmawangjunjie\\40163.com@10.185.1.95",
+          "Online": false,
+          "UserName": "cbmawangjunjie\\40163.com",
+          "ImgUrl": "images/user-img.png",
+          "Job": "局长",
+          "MsgCount": "0"
         }
       ]
     }

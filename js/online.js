@@ -1,13 +1,23 @@
 var UserInfo = React.createClass({displayName: "UserInfo",
     getInitialState:function(){
         return{
-            LogName:""
+            LogName:"",
+            Status:"icon-ok-sign"
         }
     },
     componentWillReceiveProps:function(res){
         this.setState({
             LogName:res.LogName
-        })
+        });
+        if(res.Status){
+            this.setState({
+                Status:"icon-ok-sign"
+            });
+        }else {
+            this.setState({
+                Status:"icon-remove-sign"
+            })
+        }
     },
     HandleLogNameChang:function(event){
         this.setState({
@@ -26,7 +36,7 @@ var UserInfo = React.createClass({displayName: "UserInfo",
                 React.createElement("div",{className:"info"},
                     React.createElement("div",{className:"state dib"},
                         React.createElement("div",{className:"display w20 ste"},
-                            React.createElement("i",{className:"icon-ok-sign"})
+                            React.createElement("i",{className:this.state.Status})
                         ),
                         React.createElement("div",{className:"display dib w20"},
                             React.createElement("i",{className:"icon-caret-down"})
@@ -49,7 +59,11 @@ var UserInfo = React.createClass({displayName: "UserInfo",
                     ),
                     React.createElement("p",{className:"name dib"},this.props.Name),
                     React.createElement("div",{className:"log-name mt5"},
-                        React.createElement("input",{type:"text",placeholder:"编辑个性签名",value:this.state.LogName,onChange:this.HandleLogNameChang})
+                        React.createElement("input",{
+                            type:"text",placeholder:"编辑个性签名",
+                            value:this.state.LogName,
+                            onChange:this.HandleLogNameChang
+                        })
                     )
                 )
             )
@@ -67,9 +81,10 @@ var UserInfo = React.createClass({displayName: "UserInfo",
 });
 //获取数据。
 function NewDate(){
-    this.UserName = "";
-    this.HeadImg = "";
-    this.Status = "";
+    this.UserName = "";//用户名
+    this.HeadImg = "";//头像
+    this.Status = "";//是否在线状态
+    this.Post = "";//签名
     this.setUserName = function(n){
         this.UserName = n;
         this.propertyChange();
@@ -82,9 +97,18 @@ function NewDate(){
         this.Status = n;
         this.propertyChange();
     };
+    this.setPost = function (n) {
+        this.Post = n;
+        this.propertyChange();
+    };
     this.propertyChange = function(){
         ReactDOM.render(
-            React.createElement(UserInfo,{Name:this.UserName,ImgUrl:this.HeadImg,LogName:this.Status}),
+            React.createElement(UserInfo,{
+                Name:this.UserName,
+                ImgUrl:this.HeadImg,
+                LogName:this.Post,
+                Status:this.Status
+            }),
             document.getElementById("userInfo")
         );
     }
@@ -96,7 +120,12 @@ var nowDate = new NewDate();
 
 
 ReactDOM.render(
-    React.createElement(UserInfo,{Name:nowDate.UserName,ImgUrl:nowDate.HeadImg,LogName:nowDate.Status}),
+    React.createElement(UserInfo,{
+        Name:nowDate.UserName,
+        ImgUrl:nowDate.HeadImg,
+        LogName:nowDate.Post,
+        Status:nowDate.Status
+    }),
     document.getElementById("userInfo")
 );
 

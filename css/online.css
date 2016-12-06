@@ -78,6 +78,7 @@
     width: 80px;
     background: #ffffff;
     display: none;
+    z-index:100;
 }
 .user-info .info ul.abs li{
     border-bottom: 1px solid #cccbd0;
@@ -124,7 +125,54 @@
     line-height: 30px;
     background: url("../images/top-search.png") no-repeat center center /100% 30px;
     margin-top: 8px;
+    position: relative;
 }
+/*搜索列表*/
+.top .search .ResultList{
+    position: absolute;
+    top: 30px;
+    left:0;
+    background: #c2ffc5;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+    overflow: auto;
+}
+.top .search .ResultList .ListItem{
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.top .search .ResultList .ListItem:hover{
+    background: #fbefc1;
+}
+.top .search .ResultList .img{
+    float: left;
+    height: 30px;
+    width: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.top .search .ResultList .img img{
+    height: 100%;
+    width: 100%;
+}
+.top .search .ResultList .info{
+    margin-left: 35px;
+    line-height: 30px;
+    color: #cccccc;
+    font-size: 13px;
+}
+.top .search .ResultList .info .name{
+    color: #333333;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+
+
 .top .search input[type=text]{
     height: 30px;
     margin-left: 20px;
@@ -539,6 +587,49 @@
     color: #929090;
     font-size: 10px;
 }
+/*发送文件消息，样式。*/
+.chat-item .fileContent .img{
+    float: left;
+    height: 54px;
+    width: 48px;
+    position: relative;
+}
+.chat-item .fileContent .img .TypeTip{
+    height:100%;
+    width:100%;
+}
+.chat-item .fileContent .img .successTip{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    bottom: 0;
+    right: 0;
+}
+.chat-item .fileInfo{
+    margin-left: 65px;
+}
+.chat-item .fileInfo .name{
+    color: #333333;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.chat-item .fileInfo .size{
+    color: #777777;
+    font-size: 12px;
+}
+.chat-item .fnBtn{
+    margin-top: 5px;
+    border-top: 1px solid #dff0d8;
+    height: 25px;
+    line-height: 25px;
+}
+.chat-item .fnItem{
+    color: #3eaa5d;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 10px;
+}
+
 
 
 

@@ -22,7 +22,7 @@ function getNowDate() {
     var date = new Date();
     var year = date.getFullYear();
     var month = date.getMonth()+1;
-    var day = date.getDay();
+    var day = date.getDate();
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var string = year+"-"+month+"-"+day+" "+hours+":"+minutes;
@@ -67,9 +67,19 @@ var ChatBox = React.createClass({
     render:function(){
         var newDate =[];
         for(var i =0; i<this.props.data.length; i++){
-            newDate.push(
-                React.createElement(ChatMessage,{key:this.props.data[i].key,message:this.props.data[i]})
-            )
+            /*判断是否是文件格式的消息。*/
+            if(this.props.data[i].guid){
+                newDate.push(
+                    React.createElement(FileItem,{
+                        key:this.props.data[i].guid,
+                        FileInfo:this.props.data[i]
+                    })
+                )
+            }else {
+                newDate.push(
+                    React.createElement(ChatMessage,{key:this.props.data[i].key,message:this.props.data[i]})
+                )
+            }
         }
         return(
             React.createElement("div",{className:"chat-content"},newDate)
@@ -87,6 +97,7 @@ var ChatMessage = React.createClass({
                             React.createElement("span",{className:"yourself"},"我"),
                             React.createElement("span",{className:"time"},this.props.message.date)
                         ),
+                        // React.createElement("div",{dangerouslySetInnerHTML:{__html:this.props.message.content}})
                         React.createElement("div",null,this.props.message.content)
                     )
                 )
@@ -104,6 +115,154 @@ var ChatMessage = React.createClass({
                     )
                 )
             )
+        }
+    }
+});
+/*文件列表*/
+var FileItem = React.createClass({
+    getInitialState:function () {
+        return{
+            fileType:""
+        }
+    },
+    render:function () {
+        if(this.props.FileInfo.issend){
+            return(
+                React.createElement("div",{className:"chat-item clearfix"},
+                    React.createElement("div",{className:"chat-my"},
+                        React.createElement("div",{className:"message-author"},
+                            React.createElement("span",{className:"yourself"},"我"),
+                            React.createElement("span",{className:"time"},this.props.FileInfo.date)
+                        ),
+                        React.createElement("div",{className:"fileContent clearfix"},
+                            React.createElement("div",{className:"img"},
+                                React.createElement("img",{
+                                    className:"TypeTip",
+                                    src:this.state.fileType
+                                }),
+                                React.createElement("img",{
+                                    className:"successTip",
+                                    src:""
+                                })
+                            ),
+                            React.createElement("div",{className:"fileInfo"},
+                                React.createElement("p",{className:"name"},this.props.FileInfo.name),
+                                React.createElement("p",{className:"size"},this.props.FileInfo.size)
+                            )
+                        ),
+                        React.createElement("div",{className:"fnBtn"},
+                            React.createElement("a",{className:"fnItem"}),
+                            React.createElement("a",{className:"fnItem"}),
+                            React.createElement("a",{className:"fnItem"})
+                        )
+                    )
+                )
+            )
+        }else {
+            return(
+                React.createElement("div",{className:"chat-item clearfix"},
+                    React.createElement("div",{className:"chat-other"},
+                        React.createElement("div",{className:"message-author"},
+                            React.createElement("span",{className:"time"},this.props.FileInfo.date),
+                            React.createElement("span",{className:"yourself"},this.props.FileInfo.nickname)
+                        ),
+                        React.createElement("div",{className:"fileContent clearfix"},
+                            React.createElement("div",{className:"img"},
+                                React.createElement("img",{
+                                    className:"TypeTip",
+                                    src:this.state.fileType
+                                }),
+                                React.createElement("img",{
+                                    className:"successTip",
+                                    src:""
+                                })
+                            ),
+                            React.createElement("div",{className:"fileInfo"},
+                                React.createElement("p",{className:"name"},this.props.FileInfo.name),
+                                React.createElement("p",{className:"size"},this.props.FileInfo.size)
+                            )
+                        ),
+                        React.createElement("div",{className:"fnBtn"},
+                            React.createElement("a",{className:"fnItem"}),
+                            React.createElement("a",{className:"fnItem"}),
+                            React.createElement("a",{className:"fnItem"})
+                        )
+                    )
+                )
+            )
+        }
+
+    },
+    componentDidMount:function () {
+        switch (this.props.FileInfo.type){
+            case 1 :this.setState({
+                fileType:"images/icon/pdf.png"
+            });
+                break;
+            case 2 :this.setState({
+                fileType:"images/icon/doc.png"
+            });
+                break;
+            case 3 :this.setState({
+                fileType:"images/icon/ECEL.png"
+            });
+                break;
+            case 4 :this.setState({
+                fileType:"images/icon/pic.png"
+            });
+                break;
+            case 5 :this.setState({
+                fileType:"images/icon/PPT.png"
+            });
+                break;
+            case 6 :this.setState({
+                fileType:"images/icon/zip.png"
+            });
+                break;
+            case 7 :this.setState({
+                fileType:"images/icon/wenjian.png"
+            });
+                break;
+            default:this.setState({
+                fileType:"images/icon/wenjian.png"
+            });
+                break;
+        }
+    },
+    componentWillReceiveProps:function (nextprops) {
+        switch (nextprops.FileInfo.type){
+            case 1 :this.setState({
+                fileType:"images/icon/pdf.png"
+            });
+                break;
+            case 2 :this.setState({
+                fileType:"images/icon/doc.png"
+            });
+                break;
+            case 3 :this.setState({
+                fileType:"images/icon/ECEL.png"
+            });
+                break;
+            case 4 :this.setState({
+                fileType:"images/icon/pic.png"
+            });
+                break;
+            case 5 :this.setState({
+                fileType:"images/icon/PPT.png"
+            });
+                break;
+            case 6 :this.setState({
+                fileType:"images/icon/zip.png"
+            });
+                break;
+            case 7 :this.setState({
+                fileType:"images/icon/wenjian.png"
+            });
+                break;
+            default:this.setState({
+                fileType:"images/icon/wenjian.png"
+            });
+                break;
         }
     }
 });
@@ -132,6 +291,9 @@ var ChatFunctionItem = React.createClass({
                     ),
                     React.createElement("li",{className:"function-item w20"},
                         React.createElement("span",{className:"icon-picture"})
+                    ),
+                    React.createElement("li",{className:"function-item w20"},
+                        React.createElement("span",{className:"icon-folder-open",title:"点击上传文件"})
                     )
                 ),
                 React.createElement("div",{className:"fr message-log w20"},
@@ -176,7 +338,6 @@ var ChatSubmit = React.createClass({
         )
     }
 });
-
 /*聊天对象信息设置*/
 function SetUserInfo() {
     this.name = "";
@@ -209,7 +370,6 @@ ReactDOM.render(
     }),
     document.getElementById("chat-object")
 );
-
 /*聊天消息添加*/
 function AddMsg() {
     this.msg = [];
@@ -217,6 +377,21 @@ function AddMsg() {
         var ObjectData = JSON.parse(data);
         ObjectData.msg.key = Math.random(new Date())*1000;
         this.msg.push(ObjectData.msg);
+        this.propertyChange();
+    };
+    this.AddFile = function (data) {
+        var ObjectData = JSON.parse(data);
+        for(var i=0; i<this.msg.length; i++){
+            if(this.msg[i].guid){
+                if(this.msg[i].guid == ObjectData.file.guid){
+                    /*更新内容。*/
+
+                    this.propertyChange();
+                    return;
+                }
+            }
+        }
+        this.msg.push(ObjectData.file);
         this.propertyChange();
     };
     this.propertyChange = function () {
@@ -227,6 +402,7 @@ function AddMsg() {
     }
 }
 var AddMessage = new AddMsg();
+
 ReactDOM.render(
     React.createElement(ChatFormAndMessage,{data:AddMessage.msg}),
     document.getElementById("chat-content")
