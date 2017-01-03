@@ -134,9 +134,49 @@
     left:0;
     background: #c2ffc5;
     width: 100%;
-    z-index: 1000;
+    height: 100%;
+    z-index: 101;
     display: none;
-    overflow: auto;
+    overflow: hidden;
+}
+.top .search .ResultList .listbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 12px;
+    z-index: 102;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: none;
+}
+.top .search .ResultList .inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+.top .search .ResultList .listbar .list-scrollbar{
+    width: 100%;
+    height: 30px;
+    background: #c1bfc0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.top .search .ResultList .listbar:hover{
+    background: #d8d5d7;
+}
+.top .search .ResultList .listbar:hover .list-scrollbar{
+    background: #818081;
 }
 .top .search .ResultList .ListItem{
     border-bottom: 1px solid #cccccc;
@@ -202,6 +242,19 @@
     background: url("../images/search-new.png") no-repeat center center;
     cursor: pointer;
 }
+/*12-5 add*/
+.top .search span[class*=icon-]{
+    display: block;
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+}
+/***********/
 .check-item{
     height: 35px;
     background: url("../images/check-item.png") no-repeat center center /100% 35px;
@@ -229,7 +282,62 @@
     height: 45px;
     line-height: 45px;
     padding: 0 20px;
+    position: relative;
     background: url("../images/bottom.png") no-repeat center center /100% 45px;
+}
+.bottom .setting-box{
+    position: absolute;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    top: -190px;
+    left: 30px;
+    z-index: 100;
+    display: none;
+    background: #ffffff;
+}
+.bottom .setting-box .sftp{
+    display: block;
+    color: #000000;
+    font-size: 16px;
+    border-bottom: 1px solid #c7c6c4;
+    padding: 0 15px;
+    background: url("../images/sftp.png")no-repeat 120px center;
+}
+.bottom .function-btn{
+    padding: 0 15px;
+    color: #000000;
+    font-size: 12px;
+    line-height: 25px;
+}
+.bottom .function-btn:hover{
+    background: #cccccc;
+    cursor: pointer;
+}
+.bottom .function-btn span{
+    line-height: 25px;
+    color: #b6b5b1;
+}
+.bottom .bottom-f{
+    background: #e7e5f3;
+    line-height: 35px;
+}
+.bottom .bottom-f .s_btn{
+    color: #3dad5d;
+    font-size: 12px;
+    line-height: 35px;
+    display: block;
+    float: left;
+    padding: 0 10px;
+}
+.bottom .bottom-f .s_btn:hover{
+    text-decoration: underline;
+}
+.bottom .bottom-f .s_btn.quit{
+    background: url("../images/quit.png")no-repeat left center;
+    padding: 0 20px;
+    margin-left: 5px;
 }
 .bottom input[type = button]{
     height: 25px;
@@ -263,15 +371,63 @@
 }
 .tab_group .tab_1{
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    position: relative;
 }
 .tab_group .tab_2{
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
+.tab_2 .SFL,.tab_1 .history-list{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.tab_2 .SFL .inner,.tab_1 .history-list .inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+.tab_2 .SFL .listbar,.tab_1 .history-list .listbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 12px;
+    z-index: 100;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+}
+.tab_2 .SFL .listbar .list-scrollbar,.tab_1 .history-list .listbar .list-scrollbar{
+    width: 100%;
+    height: 30px;
+    background: #c1bfc0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.tab_2 .SFL .listbar:hover,.tab_1 .history-list .listbar:hover{
+    background: #d8d5d7;
+}
+.tab_2 .SFL .listbar:hover .list-scrollbar,.tab_1 .history-list .listbar:hover .list-scrollbar{
+    background: #818081;
 }
 .tab_group .tab_3{
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .history-list li{
     padding: 5px;
@@ -588,6 +744,9 @@
     font-size: 10px;
 }
 /*发送文件消息，样式。*/
+.chat-item .fileContent{
+    min-width: 260px;
+}
 .chat-item .fileContent .img{
     float: left;
     height: 54px;
@@ -612,6 +771,10 @@
     color: #333333;
     font-size: 14px;
     margin-top: 5px;
+    width: 100%;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
 }
 .chat-item .fileInfo .size{
     color: #777777;
@@ -623,15 +786,22 @@
     height: 25px;
     line-height: 25px;
 }
+.chat-item .fnBtn .msgtips{
+    color: #666666;
+    font-size: 12px;
+}
 .chat-item .fnItem{
     color: #3eaa5d;
     font-size: 14px;
     line-height: 25px;
     margin: 0 10px;
+    cursor: pointer;
 }
-
-
-
+.chat-item #fileProgress{
+    width: 100%;
+    height: 5px;
+}
+/**********************************************************/
 
 .chat-login{
     background: url("../images/chat-login.png") no-repeat center top /100% 190px;
@@ -663,6 +833,7 @@
 .login-form .form-input{
     width: 200px;
     margin: 0 10px;
+    position: relative;
 }
 .login-form .form-input input[type=text],.login-form .form-input input[type=password]{
     width: 100%;
@@ -671,17 +842,23 @@
     border: 1px solid #ccc;
     padding-left: 10px;
 }
+.login-form .form-input input[type=text]:hover,.login-form .form-input input[type=password]:hover{
+    border-color: #20a088;
+    z-index: 10;
+}
 .login-form .form-input input.number{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    position: relative;
 }
 .login-form .form-input input.password{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border-top: none;
     margin-bottom: 15px;
+    position: relative;
+    top: -1px;
 }
-.login-form .form-input input[type=button]{
+.login-form .form-input input[type=button],.login-form .form-input input[type=submit]{
     display: block;
     height: 30px;
     line-height: 30px;
@@ -694,9 +871,233 @@
     margin-left: auto;
     margin-right: auto;
 }
+/*下拉框按钮*/
+.login-form .form-input span{
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #cccccc;
+    right: -10px;
+    cursor: pointer;
+    z-index: 100;
+}
+.login-form .Down-select{
+    position: absolute;
+    border: 1px solid #20a088;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    top: 31px;
+    left: 0;
+    width: 209px;
+    z-index: 20;
+    background: #ffffff;
+    display: none;
+}
+.login-form .Down-select .HistoryItem{
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.login-form .Down-select .HistoryItem:hover{
+    background: #20a088;
+    color: #ffffff;
+}
+.login-form .Down-select .HistoryItem .img{
+    height: 30px;
+    width: 30px;
+    float: left;
+    overflow: hidden;
+    margin-left: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.login-form .Down-select .HistoryItem .img img{
+    height: 100%;
+    width: 100%;
+}
+.login-form .Down-select .HistoryItem .username{
+    margin-left: 40px;
+    line-height: 30px;
+}
+.login-form .HistoryItem span.icon-remove{
+    top: 0;
+    right: 0;
+}
+.login-form .HistoryItem span.icon-remove:hover{
+    opacity: 0.8;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+}
 .login-form .help{
     display: block;
     color: #20a088;
     line-height: 30px;
     margin-left: 15px;
 }
+
+/*///////////////////////////////////////////////////*/
+/*窗口右下角提示弹窗*/
+.Tips-window{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.Tips-window .title{
+    height: 30px;
+    background: #3eaa5d;
+    padding-left: 10px;
+    padding-right: 5px;
+    position: relative;
+}
+.Tips-window .icon-remove{
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.Tips-window .icon-remove:hover{
+    opacity: 0.8;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+}
+.Tips-window .img{
+    height: 20px;
+    width: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.Tips-window .img img{
+    height: 100%;
+    width: 100%;
+}
+.Tips-window .target-info{
+    margin-left: 25px;
+    line-height: 30px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.Tips-window .for{
+    color: #000000;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 5px;
+    text-indent: 1em;
+}
+.Tips-window .fileContent{
+    padding: 0 10px;
+}
+.Tips-window .fileContent .img{
+    float: left;
+    height: 54px;
+    width: 48px;
+    position: relative;
+}
+.Tips-window .fileContent .img .TypeTip{
+    height:100%;
+    width:100%;
+}
+.Tips-window .fileContent .img .successTip{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    bottom: 0;
+    right: 0;
+}
+.Tips-window .fileInfo{
+    margin-left: 65px;
+}
+.Tips-window .fileInfo .name{
+    color: #333333;
+    font-size: 14px;
+    margin-top: 5px;
+    width: 100%;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+}
+.Tips-window .fileInfo .size{
+    color: #777777;
+    font-size: 12px;
+}
+.Tips-window .fnBtn{
+    margin-top: 5px;
+    border-top: 1px solid #3eaa5d;
+    height: 25px;
+    line-height: 25px;
+    width: 95%;
+    margin-left: 2.5%;
+}
+.Tips-window .fnBtn .msgtips{
+    color: #666666;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.Tips-window .fnItem{
+    color: #3eaa5d;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.Tips-window #fileProgress{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

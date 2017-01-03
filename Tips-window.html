@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/base.css'>
+    <link rel="stylesheet" href="css/online.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="react/react.min.js"></script>
+    <script src="react/react-dom.min.js"></script>
+    <script src="react/browser.min.js"></script>
+</head>
+<body>
+    <div id="window" class="Tips-window">
+        <div class="title clearfix">
+            <div class="img fl">
+                <img src="images/user-img.png" alt="">
+            </div>
+            <div class="target-info">
+                <span class="name">abc</span>
+                <span class="job">(局长)</span>
+            </div>
+            <span class="icon-remove"></span>
+        </div>
+        <div class="for">
+            向您发送文件
+        </div>
+        <div class="fileContent clearfix">
+            <div class="img">
+                <img src="images/icon/doc.png" alt="" class="TypeTip">
+                <img src="images/icon/success.png" alt="" class="successTip">
+            </div>
+            <div class="fileInfo">
+                <p class="name">中国林学会.pdf</p>
+                <p class="size">30MB</p>
+            </div>
+        </div>
+        <progress value=0.5 id="fileProgress"></progress>
+        <div class="fnBtn clearfix">
+            <div class="fl mr20">
+                <span class="msgtips">发送成功</span>
+            </div>
+            <div class="fr">
+                <a href="#" class="fnItem">在线发送</a>
+                <a href="#" class="fnItem">离线发送</a>
+                <a href="#" class="fnItem">取消</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="js/Tips-window.js"></script>
+</html>

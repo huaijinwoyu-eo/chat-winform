@@ -40,8 +40,27 @@ var FriendListOfHistory = React.createClass({
             }
         }
         return(
-            React.createElement("ul",{className:"history-list"},Temp)
+            React.createElement("ul",{className:"history-list"},
+                React.createElement("div",{className:"listbar"},
+                    React.createElement("div",{className:"list-left"}),
+                    React.createElement("div",{className:"list-scrollbar"}),
+                    React.createElement("div",{className:"list-right"})
+                ),
+                React.createElement("div",{className:"inner"},Temp)
+            )
         )
+    },
+    componentDidMount:function () {
+        $(".tab_group").css("height", window.innerHeight - 177);
+        $(".tab_group .list.tab_1").css("height", window.innerHeight - 177 - 35);
+        $(window).resize(function () {
+            $(".tab_group").css("height", window.innerHeight - 177);
+            $(".tab_group .list.tab_1").css("height", window.innerHeight - 177 - 35);
+        });
+        reset(".history-list",30);
+    },
+    componentDidUpdate:function () {
+        reset(".history-list",30);
     }
 });
 /*聊天历史纪录列表单元*/
@@ -81,12 +100,23 @@ var FriendListOfHistoryItem = React.createClass({
         })
     }
 });
-$(".item[name=tab_1]").on("click",function () {
-    ReactDOM.render(
-        React.createElement(FriendListOfHistory),
-        document.getElementById("FriendListOfHistory")
-    )
+
+$(".tab_group a[name=tab_1]").off("click").on("click",function (event) {
+    event.preventDefault();
+    var active = $(this).attr("name");
+    $(this).parents(".tab_group").find("a[name*=tab_]").removeClass("cur");
+    $(this).addClass("cur");
+    $(this).parents(".tab_group").find("[class*=tab_]").hide();
+    $(this).parents(".tab_group").find("." + active).slideDown(function () {
+        ReactDOM.render(
+            React.createElement(FriendListOfHistory),
+            document.getElementById("FriendListOfHistory")
+        );
+        reset(".history-list",30);
+    });
 });
+
+/*渲染*/
 ReactDOM.render(
     React.createElement(FriendListOfHistory),
     document.getElementById("FriendListOfHistory")

@@ -1,4 +1,18 @@
-[
-  {"id":"1","type":"chat-other","message":"明天去北京吧。"},
-  {"id":"2","type":"chat-my","message":"好吧好吧~"}
-]
+{
+  "UserInfo":{
+    "nickname":"abc",
+    "job":"副局长",
+    "imgurl":"...."
+  },
+  "FileInfo":{
+    "nickname":"abc",
+    "date":"2016-12-7 14:30",
+    "guid":"a",
+    "name":"qq.exe",
+    "size":"20M",
+    "type":1,
+    "msg":"" ,
+    "state":1,
+    "percent":0.50
+  }
+}

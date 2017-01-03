@@ -8,6 +8,20 @@ function ReturnJid(){
                 localStorage.setItem("Jid",data);
             }
         }
+    };
+    this.SaveUserInfo = function (data) {
+        var data = JSON.parse(data);
+        var Temp = [];
+        if(!localStorage.getItem("LoginInfo")){
+            Temp.push(data);
+        }else{
+            Temp = JSON.parse(localStorage.getItem("LoginInfo"));
+            Temp.push(data);
+        }
+        localStorage.setItem("LoginInfo",JSON.stringify(Temp));
+    };
+    this.SaveUserImg = function (data) {
+
     }
 }
 

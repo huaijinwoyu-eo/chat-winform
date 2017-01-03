@@ -99,18 +99,10 @@ var FriendItem = React.createClass({
                 var CurrentObjT = JSON.parse(localStorage.getItem("HistoryList"));
                 for(var i=0; i<CurrentObjT[CurrentJid].length; i++){
                     if(CurrentObjT[CurrentJid][i].jid == this.props.jid){
-                        CurrentObjT[CurrentJid][i].onlineTag = this.props.onlineTag;
-                        CurrentObjT[CurrentJid][i].imgUrl = this.props.imgUrl;
-                        CurrentObjT[CurrentJid][i].jid = this.props.jid;
-                        CurrentObjT[CurrentJid][i].name = this.props.name;
-                        CurrentObjT[CurrentJid][i].job = this.props.job;
-                        CurrentObjT[CurrentJid][i].UnreadMessageLength = this.state.UnreadMessageLength;
-                        CurrentObjT[CurrentJid][i].group = this.props.group;
-                        CurrentObjT[CurrentJid][i].NewOne = true;
-                        flage = false;
-                        // break;
-                    }else {
-                        CurrentObjT[CurrentJid][i].NewOne = false;
+                        /*删除该项之后重新添加。*/
+                        flage = true;
+                        CurrentObjT[CurrentJid].splice(i,1);
+                        break;
                     }
                 }
                 if(flage){
@@ -179,18 +171,41 @@ var FriendSection = React.createClass({
             );
         }
         return(
-            React.createElement("div",{},Row)
+            React.createElement("div",{className:"SFL"},
+                React.createElement("div",{className:"listbar"},
+                    React.createElement("div",{className:"list-left"}),
+                    React.createElement("div",{className:"list-scrollbar"}),
+                    React.createElement("div",{className:"list-right"})
+                ),
+                React.createElement("div",{className:"inner"},Row)
+            )
         );
     },
     componentDidUpdate:function () {
+        reset(".SFL",30);
         $(".friend-title").off("click").on("click",function(){
-            $(this).next(".friend-list").slideToggle();
+            $(this).next(".friend-list").slideToggle(function () {
+                reset(".SFL",30);
+            });
             if($(this).find("span[class*=icon-]").attr("class")=="icon-caret-down"){
                 $(this).find("span[class*=icon-]").removeClass("icon-caret-down").addClass("icon-caret-right");
             }else {
                 $(this).find("span[class*=icon-]").removeClass("icon-caret-right").addClass("icon-caret-down");
             }
-        })
+        });
+    },
+    componentDidMount:function () {
+        reset(".SFL",30);
+        $(".tab_group a[name=tab_2]").off("click").on("click",function (event) {
+            event.preventDefault();
+            var active = $(this).attr("name");
+            $(this).parents(".tab_group").find("a[name*=tab_]").removeClass("cur");
+            $(this).addClass("cur");
+            $(this).parents(".tab_group").find("[class*=tab_]").hide();
+            $(this).parents(".tab_group").find("." + active).slideDown(function () {
+                reset(".SFL",30);
+            });
+        });
     }
 
 });
@@ -204,7 +219,9 @@ var Search = React.createClass({
             searchText:"",
             HistoryList:[],
             FriendList:[],
-            display:[]
+            display:[],
+            TipIcon:"icon-search",
+            TipText:"点击进行搜索"
         }
     },
     HandleChange:function (event) {
@@ -233,10 +250,34 @@ var Search = React.createClass({
         }
     },
     HandleFocus:function () {
-        $("#Search .ResultList").slideDown();
+        $("#Search .ResultList").slideDown(function () {
+            reset(".ResultList",30);
+        });
+        this.setState({
+            TipIcon:"icon-remove-sign",
+            TipText:"点击关闭搜索",
+        })
     },
-    HandleBlur:function () {
-        $("#Search .ResultList").slideUp();
+    HandleClick:function () {
+        if(this.state.TipIcon == "icon-search"){
+            this.setState({
+                TipIcon:"icon-remove-sign",
+                TipText:"点击关闭搜索"
+            },function () {
+                $("#Search .ResultList").slideDown(function () {
+                    reset(".ResultList",30);
+                });
+            });
+        }else {
+            this.setState({
+                TipIcon:"icon-search",
+                TipText:"点击进行搜索"
+            },function () {
+                $("#Search .ResultList").slideUp(function () {
+                    reset(".ResultList",30);
+                });
+            });
+        }
     },
     render:function () {
         return(
@@ -247,13 +288,12 @@ var Search = React.createClass({
                     placeholder:"搜索联系人、群",
                     value:this.state.searchText,
                     onChange:this.HandleChange,
-                    onFocus:this.HandleFocus,
-                    onBlur:this.HandleBlur
+                    onFocus:this.HandleFocus
                 }),
-                React.createElement("input",{
-                    type:"button",
-                    className:"fr",
-                    value:""
+                React.createElement("span",{
+                    className:this.state.TipIcon,
+                    title:this.state.TipText,
+                    onClick:this.HandleClick
                 }),
                 React.createElement(ResultList,{DisplayData:this.state.display})
             )
@@ -273,14 +313,16 @@ var Search = React.createClass({
             });
         }
         /*获取搜索内容*/
-        var Temp = nextporps.SearchContent;
-        var ArrayTemp = [];
-        for(var i=0; i<Temp.length; i++){
-            Array.prototype.push.apply(ArrayTemp,Temp[i].Users);
+        if(nextporps.SearchContent){
+            var Temp = nextporps.SearchContent;
+            var ArrayTemp = [];
+            for(var i=0; i<Temp.length; i++){
+                Array.prototype.push.apply(ArrayTemp,Temp[i].Users);
+            }
+            this.setState({
+                FriendList:ArrayTemp
+            });
         }
-        this.setState({
-            FriendList:ArrayTemp
-        });
     },
     componentDidMount:function () {
         var CurrentJid = localStorage.getItem("Jid");
@@ -328,7 +370,12 @@ var ResultList = React.createClass({
 
         return(
             React.createElement("div",{className:"ResultList"},
-                DisplayArray
+                React.createElement("div",{className:"listbar"},
+                    React.createElement("div",{className:"list-left"}),
+                    React.createElement("div",{className:"list-scrollbar"}),
+                    React.createElement("div",{className:"list-right"})
+                ),
+                React.createElement("div",{className:"inner"},DisplayArray)
             )
         )
     }
@@ -381,6 +428,7 @@ function FriendsDate(){
 
         this.propertyChange();
     };
+    this.Tag = true;
     this.AddFriendItem = function (data) {
         var data;
         data = JSON.parse(data);
@@ -388,14 +436,18 @@ function FriendsDate(){
             if(data.group == this.FriendList[i].GroupName){
                 for(var j=0; j<this.FriendList[i].Users.length; j++){
                     if(this.FriendList[i].Users[j].Jid == data.jid){
-                        this.FriendList[i].Users[j].Jid = data.jid;
-                        this.FriendList[i].Users[j].Online = data.online;
-                        this.FriendList[i].Users[j].UserName = data.nickname;
-                        this.FriendList[i].Users[j].ImgUrl = data.imgurl;
-                        this.FriendList[i].Users[j].Job = data.job;
-                        this.FriendList[i].Users[j].MsgCount = data.msgcount;
-
-                        this.FriendList[i].Users.splice(j,1);
+                        if(this.FriendList[i].Users[j].MsgCount == data.msgcount){
+                            this.FriendList[i].Users[j].Jid = data.jid;
+                            this.FriendList[i].Users[j].Online = data.online;
+                            this.FriendList[i].Users[j].UserName = data.nickname;
+                            this.FriendList[i].Users[j].ImgUrl = data.imgurl;
+                            this.FriendList[i].Users[j].Job = data.job;
+                            this.FriendList[i].Users[j].MsgCount = data.msgcount;
+                            this.Tag = false;
+                        }else {
+                            this.Tag = true;
+                            this.FriendList[i].Users.splice(j,1);
+                        }
                         // this.FriendList[i].Users.push({
                         //     jid: data.jid,
                         //     online: data.online,
@@ -409,14 +461,16 @@ function FriendsDate(){
                         break;
                     }
                 }
-                this.FriendList[i].Users.push({
-                    Jid: data.jid,
-                    Online: data.online,
-                    UserName: data.nickname,
-                    ImgUrl: data.imgurl,
-                    Job: data.job,
-                    MsgCount:data.msgcount
-                });
+                if(this.Tag){
+                    this.FriendList[i].Users.unshift({
+                        Jid: data.jid,
+                        Online: data.online,
+                        UserName: data.nickname,
+                        ImgUrl: data.imgurl,
+                        Job: data.job,
+                        MsgCount:data.msgcount
+                    });
+                }
                 this.propertyChange();
                 return;
             }
@@ -458,4 +512,6 @@ ReactDOM.render(
     React.createElement(Search,{SearchContent:nowFriendsDate.FriendList}),
     document.getElementById("Search")
 );
+
+
 

@@ -9,25 +9,24 @@
     <title>Title</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
-    <script src="js/main.js"></script>
-    <!--<script src="js/main-chat.js"></script>-->
     <script src="react/react.min.js"></script>
     <script src="react/react-dom.min.js"></script>
     <script src="react/browser.min.js"></script>
-    <script src="js/getDate.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/main.js"></script>
     <script>
-        $(function(){
-            $(".tab_group").css("height",window.innerHeight-177);
-            $(".tab_group .list.tab_1").css("height",window.innerHeight-177-35);
-            $(".tab_group .list.tab_2").css("height",window.innerHeight-177-35);
-            $(".tab_group .list.tab_3").css("height",window.innerHeight-177-35);
-            $("#Search .ResultList").css("height",window.innerHeight-177);
-            $(window).resize(function(){
-                $(".tab_group").css("height",window.innerHeight-177);
-                $(".tab_group .list.tab_1").css("height",window.innerHeight-177-35);
-                $(".tab_group .list.tab_2").css("height",window.innerHeight-177-35);
-                $(".tab_group .list.tab_3").css("height",window.innerHeight-177-35);
-                $("#Search .ResultList").css("height",window.innerHeight-177);
+        $(function () {
+            $(".tab_group").css("height", window.innerHeight - 177);
+            $(".tab_group .list.tab_1").css("height", window.innerHeight - 177 - 35);
+            $(".tab_group .list.tab_2").css("height", window.innerHeight - 177 - 35);
+            $(".tab_group .list.tab_3").css("height", window.innerHeight - 177 - 35);
+            $("#Search .ResultList").css("height", window.innerHeight - 177);
+            $(window).resize(function () {
+                $(".tab_group").css("height", window.innerHeight - 177);
+                $(".tab_group .list.tab_1").css("height", window.innerHeight - 177 - 35);
+                $(".tab_group .list.tab_2").css("height", window.innerHeight - 177 - 35);
+                $(".tab_group .list.tab_3").css("height", window.innerHeight - 177 - 35);
+                $("#Search .ResultList").css("height", window.innerHeight - 177);
             });
 //            $(".history-list li").each(function(){
 //                if($(this).attr("data-message")){
@@ -108,93 +107,93 @@
 </div>
 <div class="tab_group">
     <div class="check-item">
-        <a class="item cur" name="tab_1">
+        <a class="item cur" name="tab_1" title="点击刷新">
             <i class="icon-time"></i>
         </a>
-        <a class="item" name="tab_2">
+        <a class="item" name="tab_2" title="点击刷新">
             <i class="icon-user"></i>
         </a>
-        <a class="item" name="tab_3">
+        <a class="item" name="tab_3" title="点击刷新">
             <i class=" icon-group"></i>
         </a>
     </div>
     <div class="list tab_1" id="FriendListOfHistory">
-        <ul class="history-list">
-            <li class="has-message" data-message="5">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-            <li class="" data-message="">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-            <li class="has-message" data-message="2">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-            <li class="" data-message="">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-            <li class="" data-message="">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-            <li class="" data-message="">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-            <li class="" data-message="">
-                <a href="#" class="db">
-                    <img src="images/user-img.png" alt="" class="db fl">
-                    <div class="info">
-                        <div class="name">axx</div>
-                        <div class="job">(局长)</div>
-                    </div>
-                    <div class="abs message"></div>
-                </a>
-            </li>
-        </ul>
+        <!--<ul class="history-list">-->
+            <!--<li class="has-message" data-message="5">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="" data-message="">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="has-message" data-message="2">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="" data-message="">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="" data-message="">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="" data-message="">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="" data-message="">-->
+                <!--<a href="#" class="db">-->
+                    <!--<img src="images/user-img.png" alt="" class="db fl">-->
+                    <!--<div class="info">-->
+                        <!--<div class="name">axx</div>-->
+                        <!--<div class="job">(局长)</div>-->
+                    <!--</div>-->
+                    <!--<div class="abs message"></div>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
     </div>
     <div class="list tab_2 un-visible" id="friend-list">
         <div class="friend-title w20">
-            <span class="icon-caret-right"></span>  我的好友（<span class="online">10</span>/<span class="total">20</span>）
+            <span class="icon-caret-right"></span> 我的好友（<span class="online">10</span>/<span class="total">20</span>）
         </div>
         <ul class="friend-list">
             <li class="online-item">
@@ -237,13 +236,39 @@
     </div>
 </div>
 
-
 <div class="bottom">
-    <input type="button" class="setting fl" onclick="localStorage.clear();">
+    <input type="button" class="setting fl">
     <input type="button" class="volume fl">
     <input type="button" class="plus fl">
     <input type="button" class="menu fr">
+    <div class="setting-box">
+        <a href="#" class="sftp">传文件到手机</a>
+        <p class="function-btn mt10">
+            工具
+            <span class="icon-chevron-right fr"></span>
+        </p>
+        <p class="function-btn">
+            安全
+            <span class="icon-chevron-right fr"></span>
+        </p>
+        <p class="function-btn mb15">
+            帮助
+            <span class="icon-chevron-right fr"></span>
+        </p>
+        <div class="clearfix bottom-f">
+            <a href="#" class="s_btn">修改密码</a>
+            <a href="#" class="s_btn">切换账号</a>
+            <a href="#" class="s_btn quit">退出</a>
+        </div>
+    </div>
 </div>
+<script>
+    $(function () {
+        $(".bottom .setting").on("click",function () {
+            $(".bottom .setting-box").slideToggle();
+        });
+    })
+</script>
 <script src="js/online.js"></script>
 <script src="js/friend-list.js"></script>
 <script src="js/history-list.js"></script>

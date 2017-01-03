@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>Title</title>
     <script src="js/jquery.min.js"></script>
+    <script src="react/react.min.js"></script>
+    <script src="react/react-dom.min.js"></script>
+    <script src="react/browser.min.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
     <!--<script src="js/main-chat.js"></script>-->
     <script>
@@ -28,11 +31,28 @@
             </div>
         </div>
         <div class="logo"></div>
-        <div class="login-form">
+        <div class="login-form" id="login-form">
             <div class="user-img fl">
                 <img src="images/user-img.png" alt="">
             </div>
             <div class="form-input fl">
+                <span class="icon-caret-down down"></span>
+                <div class="Down-select">
+                    <div class="HistoryItem clearfix">
+                        <div class="img fl">
+                            <img src="images/user-img.png" alt="">
+                        </div>
+                        <div class="username">abc</div>
+                        <span class="icon-remove" title="点击删除该信息"></span>
+                    </div>
+                    <div class="HistoryItem clearfix">
+                        <div class="img fl">
+                            <img src="images/user-img.png" alt="">
+                        </div>
+                        <div class="username">abc</div>
+                        <span class="icon-remove" title="点击删除该信息"></span>
+                    </div>
+                </div>
                 <input type="text" class="number" placeholder="请输入账号">
                 <input type="password" class="password" placeholder="请输入密码">
                 <input type="checkbox">
@@ -47,6 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="js/login.js"></script>
+    <script src="js/login-sub.js"></script>
 </body>
 </html>
