@@ -1,0 +1,107 @@
+@charset "utf-8";
+/*更换字体，变化文字大小组件相关css*/
+.ChangeText{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    height: 30px;
+    width: 90%;
+    background: #ffffff;
+    border:1px solid #cccccc;
+    border-bottom: none;
+}
+.ChangeText select{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.ChangeText .demo-display{
+    position: absolute;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    left: 50%;
+    top: 7px;
+    overflow: visible;
+}
+/*表情组件相关css*/
+.IconComponent{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    height: 200px;
+    width: 90%;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    overflow: hidden;
+}
+/*聊天框的滚动条*/
+.IconComponent .inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 98%;
+}
+.IconComponent .listbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2%;
+    z-index: 100;
+    background: #ffffff;
+    cursor: pointer;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+}
+.IconComponent .listbar .list-scrollbar{
+    width: 100%;
+    height: 30px;
+    background: #c1bfc0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.IconComponent .listbar:hover{
+    background: #d8d5d7;
+}
+.IconComponent .listbar:hover .list-scrollbar{
+    background: #818081;
+}
+
+
+.IconComponent .IconItem{
+    width: 6.666%;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+.IconComponent .IconItem:hover{
+    background: #f3f3f3;
+}
+.IconComponent .more{
+    color: #333333;
+    text-decoration: underline;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.IconComponent .IconItem img{
+    margin-top: 5px;
+    width: 75%;
+}

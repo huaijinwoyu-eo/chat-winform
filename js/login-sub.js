@@ -59,7 +59,7 @@ var LoginForm = React.createClass({
         return{
             UserName:"",
             PassWord:"",
-            ImgUrl:"",
+            ImgUrl:"images/user-img.png",
             isRemember:false,
             HistoryList:[]
         }

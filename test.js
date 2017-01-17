@@ -23,3 +23,6 @@ var temp = arr.pop();
 console.log(temp);
 
 
+console.log(Array.prototype.slice.call(['a','b','/images/abc.png']));
+console.log(["a","b","/images/abc.png"].toString().split(","));
+console.log(typeof JSON.parse(JSON.stringify(['a','b','c'])));

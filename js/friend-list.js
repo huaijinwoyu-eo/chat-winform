@@ -182,10 +182,10 @@ var FriendSection = React.createClass({
         );
     },
     componentDidUpdate:function () {
-        reset(".SFL",30);
+        reset(".SFL",30,167);
         $(".friend-title").off("click").on("click",function(){
             $(this).next(".friend-list").slideToggle(function () {
-                reset(".SFL",30);
+                reset(".SFL",30,167);
             });
             if($(this).find("span[class*=icon-]").attr("class")=="icon-caret-down"){
                 $(this).find("span[class*=icon-]").removeClass("icon-caret-down").addClass("icon-caret-right");
@@ -195,7 +195,7 @@ var FriendSection = React.createClass({
         });
     },
     componentDidMount:function () {
-        reset(".SFL",30);
+        reset(".SFL",30,167);
         $(".tab_group a[name=tab_2]").off("click").on("click",function (event) {
             event.preventDefault();
             var active = $(this).attr("name");
@@ -203,7 +203,7 @@ var FriendSection = React.createClass({
             $(this).addClass("cur");
             $(this).parents(".tab_group").find("[class*=tab_]").hide();
             $(this).parents(".tab_group").find("." + active).slideDown(function () {
-                reset(".SFL",30);
+                reset(".SFL",30,167);
             });
         });
     }
@@ -251,7 +251,7 @@ var Search = React.createClass({
     },
     HandleFocus:function () {
         $("#Search .ResultList").slideDown(function () {
-            reset(".ResultList",30);
+            reset(".ResultList",30,131);
         });
         this.setState({
             TipIcon:"icon-remove-sign",
@@ -265,7 +265,7 @@ var Search = React.createClass({
                 TipText:"点击关闭搜索"
             },function () {
                 $("#Search .ResultList").slideDown(function () {
-                    reset(".ResultList",30);
+                    reset(".ResultList",30,131);
                 });
             });
         }else {
@@ -274,7 +274,7 @@ var Search = React.createClass({
                 TipText:"点击进行搜索"
             },function () {
                 $("#Search .ResultList").slideUp(function () {
-                    reset(".ResultList",30);
+                    reset(".ResultList",30,131);
                 });
             });
         }
@@ -378,6 +378,9 @@ var ResultList = React.createClass({
                 React.createElement("div",{className:"inner"},DisplayArray)
             )
         )
+    },
+    componentDidUpdate:function () {
+        reset(".ResultList",40,131)
     }
 });
 /*搜索列表单元*/
@@ -420,9 +423,9 @@ function FriendsDate(){
 
 
 
-        // var StringData = JSON.parse(data);
-        // this.FriendList = StringData.Data;
-        this.FriendList = data.Data;
+        var StringData = JSON.parse(data);
+        this.FriendList = StringData.Data;
+        // this.FriendList = data.Data;
 
 
 

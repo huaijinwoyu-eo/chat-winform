@@ -17,7 +17,7 @@
     // });
 });
 /*侧边滚动条函数（初始化）*/
-function reset(target,speed){
+function reset(target,speed,TH){
     var BarB = $(target).find('.listbar'),
         BarC = $(target).find('.list-scrollbar'),
         BarP = $(target).find('.list-left'),
@@ -43,13 +43,15 @@ function reset(target,speed){
         $(target).find(".listbar").show();
     }else {
         $(target).find(".listbar").hide();
+        $(target).find(".inner").css('top',0);
+        $(target).find(".list-scrollbar").css("top",0);
     }
     BarC.css('height',(Owindow/allwidth)*BarB.height());
     var BarBW = BarB.height()-BarC.height();
     if (Oywidth>0) {
         BarB.off("click").on('click',function(e){
             BarCX=BarC.height();
-            var PageY = e.pageY - 167;
+            var PageY = e.pageY - TH;
             var CX=PageY-BarCX;
             if(CX<=0){
                 CX=0;

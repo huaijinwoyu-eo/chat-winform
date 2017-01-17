@@ -57,10 +57,10 @@ var FriendListOfHistory = React.createClass({
             $(".tab_group").css("height", window.innerHeight - 177);
             $(".tab_group .list.tab_1").css("height", window.innerHeight - 177 - 35);
         });
-        reset(".history-list",30);
+        reset(".history-list",30,167);
     },
     componentDidUpdate:function () {
-        reset(".history-list",30);
+        reset(".history-list",30,167);
     }
 });
 /*聊天历史纪录列表单元*/
@@ -112,7 +112,7 @@ $(".tab_group a[name=tab_1]").off("click").on("click",function (event) {
             React.createElement(FriendListOfHistory),
             document.getElementById("FriendListOfHistory")
         );
-        reset(".history-list",30);
+        reset(".history-list",30,167);
     });
 });
 

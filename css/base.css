@@ -305,7 +305,10 @@ p {
 	height:0;
 	visibility:hidden;
 }
-.clearfix { display:block; }
+.clearfix {
+	display:block;
+	position: relative;
+}
 
 hr {
 	display:block;
